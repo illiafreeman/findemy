@@ -4,26 +4,16 @@
 }
 
 @media only screen and (max-width: 1400px){
-    .intro__desc {
-        flex: 0 0 50%;
-    }
+
 
 }
 
 @media only screen and (max-width: 1300px) {
-    .intro__logo {
-        margin-right: 50px;
-        width: 300px;
-    }
-    .intro__desc h1 {
-        font-size: 36px;
-    }
+
 }
 
 @media only screen and (max-width: 1170px) {
-    a:before{
-        //display: none;
-    }
+
 }
 
 @media only screen and (max-width: 1040px) {
@@ -31,106 +21,7 @@
 }
 
 @media only screen and (max-width: 980px) {
-    .header {
-        height: 48px;
-        .menu-btn {
-            font-size: 28px;
-            float: right;
-            cursor: pointer;
-            width: 48px;
-            height: 48px;
-            margin-right: -20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-    .header-nav {
-        visibility: hidden;
-        overflow: hidden;
-        position: absolute;
-        top: -100%;
-        transition: $transition;
-        opacity: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        &.vis{
-            visibility: visible;
-            overflow: visible;
-            position: fixed;
-            top: 0;
-            background: #fff;
-            opacity: 1;
-        }
-        &__list{
-            overflow-y: auto;
-            height: 100%;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-        }
-        &__item{
-            float: none;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 18px;
-            padding: 25px 10px;
-        }
-        &__link{
-            color: #1b1b1d;
-            display: inline-block;
-        }
-        &__close{
-            display: block;
-        }
-    }
-    .header-logo {
-        width: 40px;
-        height: 40px;
-        background-size: cover;
-    }
-    main {
-        padding-top: 48px;
-    }
-    .contaner{
-        width: 100%;
-    }
-    .intro {
-        height: calc(100vh - 48px);
-    }
-    #nav .submenu_parent:hover .submenu{
-        display: none;
-    }
-    .intro__logo {
-        width: 220px;
-    }
-    .intro__desc h1 {
-        font-size: 28px;
-    }
-    .intro__desc h2 {
-        font-size: 20px;
-    }
-    .intro__desc h3 {
-        font-size: 18px;
-    }
-    .article-header h2{
-        padding: 60px 0;
-    }
-    .solution-item {
-        flex: 0 0 50%;
-    }
-    .parallax-window h2 {
-        font-size: 36px;
-        width: 80%;
-    }
-    .parallax-window {
-        min-height: 300px;
-    }
-    .quote .contaner {
-        padding: 80px 50px;
-        width: 100%;
-    }
+
 
 }
 
