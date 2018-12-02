@@ -343,13 +343,83 @@ body{
     }
 }
 
+.header{
+    &-group{
 
+    }
+    &-logo{
 
+    }
+    &-nav{
+        &__list{
 
+        }
+        &__item{
+            &_devider{
 
+            }
+            &_sub{
 
+            }
+            &_button{
+                &-photo{
 
+                }
+                &-like{
 
+                }
+                &-search{
+
+                }
+                &-menu{
+
+                }
+            }
+        }
+        &__link{
+            color: red;
+        }
+    }
+    &-submenu{
+        &__item{
+            &__link{
+
+            }
+        }
+    }
+}
+
+.container{
+    &_main{
+
+    }
+}
+
+.main-page{
+    &__title{
+
+    }
+}
+
+.root-category{
+    &_m{
+
+    }
+    &_w{
+
+    }
+    &__pic{
+
+    }
+    &__name{
+        &_left{
+
+        }
+        &_right{
+
+        }
+    }
+}
 
 
 
