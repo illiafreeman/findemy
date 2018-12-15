@@ -1,5 +1,7 @@
 @import 'plugins/animate';
 @import 'plugins/normalize';
+@import '_var';
+@import '_help';
 
 @font-face {
     font-family: 'lig';
@@ -69,27 +71,6 @@
 
 
 
-
-
-
-$transition: all 0.2s ease-in-out;
-$font: 'lig', Helvetica;
-$font-bold: 'sem', Helvetica;
-
-$blue: #2099e1;
-$default: #1B1B1D;
-$gray: #888;
-
-*{
-    box-sizing: border-box;
-}
-
-.clearfix:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
 a:active,
 a:focus,
 input:active,
@@ -106,13 +87,13 @@ label:focus{
     text-decoration: none !important;
 }
 
-h1{font-size: 28px;}
+h1{font-size: 48px;}
 h2{font-size: 26px;}
 h3{font-size: 24px;}
 h4{font-size: 18px;}
 
 h1, h2, h3, h4, h5, h6{
-    font-weight: 600;
+    font-weight: 300;
     margin: 0 0 20px;
     line-height: 130%;
 }
@@ -137,35 +118,18 @@ a,
 a:hover,
 a:focus,
 a:visited,
-a:active,{
-    color: $blue;
+a:active{
+    color: $font-color;
     text-decoration: none;
     position: relative;
     transition: $transition;
 }
 
-a:before{
-    content: "";
-    width: 0;
-    height: 1px;
-    position: absolute;
-    bottom: -3px;
-    right: 0;
-    background: $blue;
-    transition: $transition;
-}
-
-a:hover:before {
-    width: 100%;
-    left: 0;
-}
-
-
 ul{
-    list-style-type: disc;
+    list-style-type: none;
     list-style-position: inside;
     display: block;
-    margin: 16px 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -201,167 +165,64 @@ table th, table td{
     padding: 8px;
 }
 
-.oh{
-    overflow: hidden;
-}
 
-.ac{
-    text-align: center;
-}
 
-.df{
-    display: flex;
-}
-
-html, body{
-    height: 100%;
-    font-family: $font, Tahoma;
-}
-
+/*fixed footer*/
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: $font-color;
     font-family: $font;
-    color: $default;
     line-height: 140%;
+    font-size: 16px;
 }
 
-.content{
-    font-family: 'Microsoft Sans Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    //color: $gray;
-    line-height: 1.5;
-    a{
-        display: inline-block;
-        position: relative;
-        color: $blue;
-        &:before{
-            content: "";
-            width: 0;
-            height: 1px;
-            position: absolute;
-            bottom: -1px;
-            right: 0;
-            background: $blue;
-            transition: $transition;
-        }
-        &:hover:before {
-            width: 100%;
-            left: 0;
-        }
-    }
-
-    h1{font-size: 28px;}
-    h2{font-size: 26px;}
-    h3{font-size: 24px;}
-    h4{font-size: 15px;}
-
-    h1, h2, h3, h4, h5, h6{
-        font-weight: 300;
-        margin: 0 0 20px;
-        line-height: 130%;
-        text-transform: uppercase;
-    }
-
-    input,
-    select,
-    textarea {
-        font-family: $font;
-    }
-
-    p{
-        margin: 0 0 16px;
-    }
-
-    img{
-        line-height: 100%;
-        max-width: 100%;
-        display: block;
-    }
-
-    a,
-    a:hover,
-    a:focus,
-    a:visited,
-    a:active,{
-        color: $blue;
-        text-decoration: none;
-        position: relative;
-        transition: $transition;
-    }
-
-    a:before{
-        content: "";
-        width: 0;
-        height: 1px;
-        position: absolute;
-        bottom: -3px;
-        right: 0;
-        background: $blue;
-        transition: $transition;
-    }
-
-    a:hover:before {
-        width: 100%;
-        left: 0;
-    }
-
-
-    ul{
-        list-style-type: disc;
-        list-style-position: inside;
-        display: block;
-        margin: 16px 0;
-        padding: 0;
-    }
-
-    ol{
-        list-style-type: decimal;
-        list-style-position: inside;
-        display: block;
-        margin: 16px 0;
-        padding: 0;
-    }
-
-    b, strong{
-        font-weight: bold;
-    }
-
-    i{
-        font-style: italic;
-    }
-
-    table{
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-        margin: 12px 0 12px;
-        width: 100%;
-    }
-
-    table th{
-        font-weight: bold;
-    }
-
-    table th, table td{
-        border: 1px solid #ccc;
-        padding: 8px;
-    }
+.footer {
+    margin: auto auto 0 auto;
 }
+/*end fixed footer*/
+
+
+
+
 
 .header{
     width: 1830px;
     padding: 0 15px;
     margin: 0 auto;
-    display: flex;
+    height: 100px;
+    box-shadow: 0 1px 0 0 #e5e5e5;
+    @extend %flex;
     &-group{
-
+        @extend %flex;
     }
     &-logo{
-
+        display: block;
+        width: 110px;
+        height: 36px;
+        background: url(../img/logo.svg) center center no-repeat;
+        @extend %nolink;
+        margin-right: 56px;
     }
     &-nav{
         &__list{
-
+            @extend %flex;
+            &_button{
+                .header-nav__item{
+                    margin: 0 0 0 25px;
+                    &:first-child{
+                        margin: 0 35px 0 0;
+                    }
+                }
+            }
         }
         &__item{
+            margin-right: 34px;
+            &:last-child{
+                margin: 0;
+            }
             &_devider{
 
             }
@@ -369,30 +230,105 @@ body{
 
             }
             &_button{
+                width: 25px;
+                height: 25px;
+                display: block;
+                background-repeat: no-repeat;
+                background-position: center center;
+                cursor: pointer;
+                position: relative;
                 &-photo{
-
+                    background-image: url(../img/icon_photo.png);
                 }
                 &-like{
-
+                    background-image: url(../img/icon_favorite_normal.svg);
+                    &:hover{
+                        .button-picto{
+                            background-color: #ff5151;
+                            color: #fff;
+                        }
+                    }
                 }
                 &-search{
-
+                    background-image: url(../img/icon_search.svg);
                 }
                 &-menu{
-
+                    background-image: url(../img/icon_menu_mobile.svg);
+                    display: none;
+                }
+                &:hover{
+                    .tooltip{
+                        opacity: 1;
+                        visibility: visible;
+                        top: 31px;
+                    }
+                }
+                .button-picto{
+                    width: 16px;
+                    height: 16px;
+                    background-color: #E5E5E5;
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    border-radius: 50%;
+                    @extend %flex-c;
+                    font-size: 8px;
+                    font-family: $font-bold;
+                    transition: $transition;
                 }
             }
         }
         &__link{
-            color: red;
+            font-family: $font-bold;
+            border-bottom: 2px solid #e5e5e5;
+            display: block;
+            line-height: 24px;
+
+            &_act, &:hover{
+                border-color: $font-color;
+            }
         }
     }
     &-submenu{
+        @extend %flex;
         &__item{
-            &__link{
-
+            margin-right: 34px;
+            &:last-child{
+                margin: 0;
             }
         }
+        &__link{
+            color: #969696 !important;
+            &_act, &:hover{
+                color: $font-color !important;
+            }
+        }
+    }
+}
+
+.tooltip{
+    position: absolute;
+    top: 41px;
+    padding: 16px;
+    background: #fff;
+    left: 50%;
+    font-size: 13px;
+    white-space: nowrap;
+    box-shadow: 0 0 40px -18px #000;
+    transform: translateX(-50%);
+    transition: $transition;
+    opacity: 0;
+    visibility: hidden;
+    &:after{
+        @extend %after;
+        width: 0;
+        height: 0;
+        border-bottom: 4px solid #fff;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        top: -4px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 

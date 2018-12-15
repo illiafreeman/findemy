@@ -15,14 +15,14 @@
                 <a href="#" class="header-logo"></a>
                 <nav class="header-nav">
                     <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link" href="#">Мужчинам</a></li>
+                        <li class="header-nav__item"><a class="header-nav__link header-nav__link_act" href="#">Мужчинам</a></li>
                         <li class="header-nav__item"><a class="header-nav__link" href="#">Женщинам</a></li>
                         <li class="header-nav__item header-nav__item_devider"><img src="img/arrow_menu.svg" alt=""/></li>
                         <li class="header-nav__item header-nav__item_sub">
                             <ul class="header-submenu">
                                 <li class="header-submenu__item"><a class="header-submenu__link" href="">Sale</a></li>
                                 <li class="header-submenu__item"><a class="header-submenu__link" href="">Одежда</a></li>
-                                <li class="header-submenu__item"><a class="header-submenu__link" href="">Обувь</a></li>
+                                <li class="header-submenu__item"><a class="header-submenu__link header-submenu__link_act" href="">Обувь</a></li>
                                 <li class="header-submenu__item"><a class="header-submenu__link" href="">Аксессуары</a></li>
                                 <li class="header-submenu__item"><a class="header-submenu__link" href="">Бренды</a></li>
                             </ul>
@@ -31,11 +31,18 @@
                 </nav>
             </div>
             <div class="header-group">
-                <ul class="header-nav__list">
+                <ul class="header-nav__list header-nav__list_button">
                     <li class="header-nav__item"><a class="header-nav__link" href="#">Статьи</a></li>
-                    <li class="header-nav__item header-nav__item_button header-nav__item_button-photo"></li>
-                    <li class="header-nav__item header-nav__item_button header-nav__item_button-like"></li>
-                    <li class="header-nav__item header-nav__item_button header-nav__item_button-search"></li>
+                    <li class="header-nav__item header-nav__item_button header-nav__item_button-photo">
+                        <div class="tooltip">Поиск по фото</div>
+                    </li>
+                    <li class="header-nav__item header-nav__item_button header-nav__item_button-like">
+                        <div class="tooltip">Избранное</div>
+                        <div class="button-picto">7</div>
+                    </li>
+                    <li class="header-nav__item header-nav__item_button header-nav__item_button-search">
+                        <div class="tooltip">Поиск по<br>товарам</div>
+                    </li>
                     <li class="header-nav__item header-nav__item_button header-nav__item_button-menu"></li>
                 </ul>
             </div>
