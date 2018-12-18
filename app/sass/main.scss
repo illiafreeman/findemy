@@ -177,6 +177,7 @@ body{
     font-family: $font;
     line-height: 140%;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .footer {
@@ -184,7 +185,9 @@ body{
 }
 /*end fixed footer*/
 
-
+*, ::before, ::after{
+    box-sizing: border-box;
+}
 
 
 
@@ -333,6 +336,9 @@ body{
 }
 
 .container{
+    width: 1418px;
+    padding: 0 15px;
+    margin: 0 auto;
     &_main{
 
     }
@@ -365,14 +371,26 @@ body{
 }
 
 .footer{
+    width: 1418px;
+    padding: 0 15px 40px;
+    @extend %flex;
+    align-items: flex-start;
     &-menu{
+        @extend %flex;
+        align-items: flex-start;
+        
         &__cat{
+            width: 240px;
             &-name{
-
+                font-size: 13px;
+                font-family: $font-bold;
+                text-transform: uppercase;
+                margin-bottom: 25px;
             }
             &-item{
-
+                margin-bottom: 8px;
             }
+
         }
         &__list{
 
@@ -385,7 +403,10 @@ body{
 
 .soc-block{
     &__title{
-
+        font-size: 13px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        margin-bottom: 25px;
     }
 }
 
@@ -406,6 +427,52 @@ body{
         &_od{
 
         }
+    }
+}
+
+.soc{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    &__item{
+        display: flex;
+        margin: 0 4px;
+        background: #c4c4c4;
+        transition: $transition;
+        &:hover{
+        }
+    }
+    &__link{
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &:before{
+            display: none;
+        }
+        &_gp{
+            background-image: url(../img/soc_gp.svg);
+        }
+        &_vk{
+            background-image: url(../img/soc_vk.svg);
+        }
+        &_pi{
+            background-image: url(../img/soc_pi.svg);
+        }
+        &_in{
+            background-image: url(../img/soc_in.svg);
+        }
+        &_tw{
+            background-image: url(../img/soc_tw.svg);
+        }
+        &_fb{
+            background-image: url(../img/soc_fb.svg);
+        }
+    }
+    &_min{
+        display: none;
     }
 }
 
