@@ -1,5 +1,5 @@
-@import 'plugins/animate';
 @import 'plugins/normalize';
+@import 'plugins/owl.carousel.min';
 @import '_var';
 @import '_help';
 
@@ -187,6 +187,7 @@ body{
 
 *, ::before, ::after{
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -486,7 +487,62 @@ body{
     }
 }
 
+.nav-mobile{
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    overflow: auto;
+    will-change: right;
+    z-index: 1000;
+    transition: $transition;
+    &_act{
+        display: block;
+        right: 0;
+    }
+    &__close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        right: 22px;
+        background: url(../img/icon_close_mobile.svg) center center no-repeat;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 1000;
+    }
+    &__wrap{
+        padding-top: 80px;
+        @extend %flex-c;
+    }
+    &__menu{
+        //width: 80%;
+        &-item{
+            text-align: center;
+            margin-bottom: 15px;
+            &_big{
+                font-size: 24px;
+                font-family: $font-bold;
+                margin: 35px 0;
+            }
 
+        }
+        &-link{
+            &_dis{
+                opacity: .2;
+            }
+        }
+    }
+    .owl-item{
+        opacity: .4;
+        min-height: calc(100vh - 80px);
+    }
+    .owl-item.active.center{
+        opacity: 1;
+    }
+}
 
 
 

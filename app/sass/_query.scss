@@ -28,7 +28,7 @@
 }
 
 @media only screen and (max-width: 1040px) {
-    .header-nav, .header-nav__item_article{
+    .header-nav, .header-nav__item_article, .header-nav__item_button-photo{
         display: none;
     }
     .header-nav__item_button-menu{
@@ -38,7 +38,7 @@
         margin: 0;
     }
     .header{
-        height: 50px;
+        height: 70px;
         padding: 0 25px;
     }
     .footer {
