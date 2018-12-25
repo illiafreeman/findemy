@@ -41,6 +41,7 @@ $(document).ready(function() {
 
     /*footer menu*/
     $('.footer-menu__cat-name').click(function () {
+        $('.footer-menu__list').removeClass('act');
         $(this).parents('.footer-menu__list').toggleClass('act');
     });
     /*end footer menu*/

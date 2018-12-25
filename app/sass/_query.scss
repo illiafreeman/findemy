@@ -13,6 +13,14 @@
 
 }
 
+@media only screen and (max-width: 1440px){
+    .container {
+        width: 100%;
+    }
+}
+
+
+
 @media only screen and (max-width: 1300px) {
     .header-nav__item_devider, .header-nav__item_sub{
         display: none;
