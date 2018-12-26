@@ -544,7 +544,8 @@ body{
 .root-category{
     width: 560px;
     margin: 0 15px;
-
+    display: flex;
+    flex-direction: column;
     &__pic{
 
     }

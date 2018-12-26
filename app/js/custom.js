@@ -25,7 +25,7 @@ $(document).ready(function() {
     var scrollTop = $(".scroll-top");
     $(window).scroll(function() {
         var topPos = $(this).scrollTop();
-        if (topPos > 300) {
+        if (topPos > 700) {
             $(scrollTop).addClass('vis');
         } else {
             $(scrollTop).removeClass('vis');
@@ -46,19 +46,14 @@ $(document).ready(function() {
     });
     /*end footer menu*/
 
-    $('.owl-carousel').owlCarousel({
-        /*margin:0,
-        loop:true,
-        autoWidth:true,
-        items:2,
-        center: true*/
-
-
+    /*mobile menu slider*/
+    $('.nav-mobile__wrap').owlCarousel({
         center: true,
         items:2,
         loop:false,
         margin:0
-    })
+    });
+    /*end mobile menu slider*/
 
 });
 
