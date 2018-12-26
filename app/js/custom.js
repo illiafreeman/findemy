@@ -78,10 +78,11 @@ $(document).ready(function() {
         if(len>0){$('.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
     }
     $('.filter__title').click(function () {
+        $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
         $(this).parents('.filter').toggleClass('filter_act');
     });
     $('.filter__action-button_cancel').click(function () {
-        $('.filter__action-button_cancel').parents('.filter').find('input').prop('checked', false).change();
+        $(this).parents('.filter').find('input').prop('checked', false).change();
         //console.log('dfg');
     });
     /*end check filter*/
