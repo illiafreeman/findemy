@@ -178,6 +178,7 @@ body{
     line-height: 140%;
     font-size: 16px;
     box-sizing: border-box;
+    letter-spacing: 0.5px;
 }
 
 .footer {
@@ -368,6 +369,7 @@ body{
                 font-family: $font-bold;
                 text-transform: uppercase;
                 margin-bottom: 25px;
+                letter-spacing: 2px;
             }
             &-item{
                 margin-bottom: 10px;
@@ -551,11 +553,44 @@ body{
         font-family: $font-bold;
         text-transform: uppercase;
         position: relative;
+        display: flex;
+        height: 60px;
+        line-height: 1;
+        letter-spacing: 2px;
         &_left{
-
+            align-items: flex-end;
+            padding-left: 40px;
+            &:after{
+                background-image: url(../img/icon_back.svg);
+                left: 0;
+                bottom: -5px;
+            }
         }
         &_right{
-
+            align-items: flex-start;
+            padding-right: 40px;
+            justify-content: flex-end;
+            &:after{
+                background-image: url(../img/arrow_link.svg);
+                right: 0;
+                top: -4px;
+            }
+        }
+        &:after{
+            @extend %after;
+            width: 26px;
+            height: 26px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: $transition;
+        }
+    }
+    &:hover{
+        .root-category__name_right::after{
+            right: -8px;
+        }
+        .root-category__name_left::after{
+            left: -8px;
         }
     }
 }
@@ -596,10 +631,16 @@ body{
 
 .page-title{
     text-align: center;
-    margin: 20px 0 50px;
+    margin: 20px 0 80px;
+    letter-spacing: 2px;
+    line-height: 116%;
 }
 
-
+.intro{
+    .page-title {
+        margin: 80px 0;
+    }
+}
 
 
 
