@@ -55,5 +55,13 @@ $(document).ready(function() {
     });
     /*end mobile menu slider*/
 
+    /*product like*/
+    $('.product__like').click(function (event) {
+        event.stopPropagation();
+        event.preventDefault();
+        $(this).toggleClass('product__like_act');
+    });
+    /*end product like*/
+
 });
 
