@@ -39,7 +39,9 @@ gulp.task('sassmin', function(){
 gulp.task('scripts', function(){
     return gulp.src([
         'plugins/jquery_2.1.1.min.js',
-        'plugins/owl.carousel.min.js'
+        'plugins/owl.carousel.min.js',
+        'plugins/jquery.slimscroll.js'
+
 
     ])
     .pipe(concat('main.min.js'))

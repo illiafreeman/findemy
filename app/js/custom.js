@@ -63,5 +63,40 @@ $(document).ready(function() {
     });
     /*end product like*/
 
+    /*check filter*/
+    $('.filter__cat input').change(function(){
+        //console.log($(this).prop('checked'));
+        if (this.checked) {
+            $(this).parents('.filter__cat').addClass('filter__cat_act');
+        }else{
+            $(this).parents('.filter__cat').removeClass('filter__cat_act');
+        }
+        updateCounter();
+    });
+    function updateCounter() {
+        var len = $('.filter__cat input:checked').length;
+        if(len>0){$('.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
+    }
+    $('.filter__title').click(function () {
+        $(this).parents('.filter').toggleClass('filter_act');
+    });
+    $('.filter__action-button_cancel').click(function () {
+        $('.filter__action-button_cancel').parents('.filter').find('input').prop('checked', false).change();
+        //console.log('dfg');
+    });
+    /*end check filter*/
+
+    /*slim scroll*/
+    $('.filter__list').slimScroll({
+        height: '',
+        color: '#969696',
+        size: '3px',
+        alwaysVisible: true,
+        borderRadius: '2px',
+        railBorderRadius: '0',
+        distance: '5px',
+        wheelStep: '50px'
+    });
+    /*end slim scroll*/
 });
 
