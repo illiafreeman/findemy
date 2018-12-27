@@ -632,7 +632,7 @@ body{
 
 .page-title{
     text-align: center;
-    margin: 20px 0 60px;
+    margin: 20px 0 45px;
     letter-spacing: 2px;
     line-height: 116%;
 }
@@ -729,18 +729,52 @@ body{
 }
 
 .filter-block{
-    @extend %flex;
     margin: 0 -15px 15px;
+    padding: 15px 0;
+    .container{
+        @extend %flex;
+        padding: 0;
+
+    }
+
+    &_fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 1000;
+
+    }
 }
 
 .filter{
-    //width: calc(20% - 30px);
-    width: 300px;
+    width: calc(20% - 30px);
+    //width: 300px;
     margin: 0 15px;
     border: 1px solid #e5e5e5;
     position: relative;
     z-index: 100;
     transition: $transition;
+    &-btn{
+        border: 1px solid #e5e5e5;
+        width: calc(50% - 30px);
+        margin: 0 15px;
+        display: none;
+        transition: $transition;
+        &:hover{
+            border: 1px solid #c8c8c8;
+        }
+        .filter__title{
+            &:after{
+                background: url(../img/mobile_icon_filters.svg) center center no-repeat;
+                width: 25px;
+                height: 25px;
+                top: 18px;
+                right: 10px;
+            }
+        }
+    }
     &:hover{
         border: 1px solid #c8c8c8;
     }
@@ -792,6 +826,7 @@ body{
         box-shadow: 0px 8px 48px 2px rgba(0,0,0,0.12);
         border: 1px solid #fff;
         border-bottom: 1px solid #e5e5e5;
+        z-index: 1000;
         &:hover{
             border: 1px solid #fff;
             border-bottom: 1px solid #e5e5e5;

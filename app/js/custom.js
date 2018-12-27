@@ -99,5 +99,34 @@ $(document).ready(function() {
         wheelStep: '50px'
     });
     /*end slim scroll*/
+
+
+
 });
+
+/*fixed filter block*/
+var filter = $('.filter-block').offset();
+var scroll = $(window).scrollTop();
+
+
+$(window).scroll(function() {
+    if ($(window).width() > 700) {
+        if($(window).scrollTop() > filter.top) {
+            $('.filter-block').addClass('filter-block_fixed');
+            var h = $('.filter-block_fixed').outerHeight();
+            $('.sort').css('padding-top', h);
+        } else{
+            $('.filter-block').removeClass('filter-block_fixed');
+            $('.sort').css('padding-top', 0);
+        }
+    }
+});
+/*end fixed filter block*/
+
+
+
+
+
+
+
 
