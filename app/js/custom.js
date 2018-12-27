@@ -135,20 +135,55 @@ $(document).ready(function() {
 
 /*fixed filter block*/
 var filter = $('.filter-block').offset();
-var scroll = $(window).scrollTop();
+var filter_sort = $('.filter-sort').offset();
 
-$(window).scroll(function() {
-    if ($(window).width() > 700) {
-        if($(window).scrollTop() > filter.top) {
-            $('.filter-block').addClass('filter-block_fixed');
-            var h = $('.filter-block_fixed').outerHeight();
-            $('.sort').css('padding-top', h);
-        } else{
-            $('.filter-block').removeClass('filter-block_fixed');
-            $('.sort').css('padding-top', 0);
+
+    $(window).scroll(function() {
+        if ($(window).width() > 700) {
+            if($(window).scrollTop() > filter.top) {
+                $('.filter-block').addClass('filter-block_fixed');
+                var h = $('.filter-block_fixed').outerHeight();
+                $('.sort').css('padding-top', h);
+            } else{
+                $('.filter-block').removeClass('filter-block_fixed');
+                $('.sort').css('padding-top', 0);
+            }
         }
-    }
-});
+        if ($(window).width() < 700) {
+            if($(window).scrollTop() > filter_sort.top) {
+                $('.filter-sort').addClass('filter-block_fixed');
+                var h = $('.filter-sort').outerHeight();
+                $('.catalog-container').css('padding-top', h);
+            } else{
+                $('.filter-sort').removeClass('filter-block_fixed');
+                $('.catalog-container').css('padding-top', 0);
+            }
+        }
+    });
+
+    $(window).resize(function() {
+        if ($(window).width() > 700) {
+            if($(window).scrollTop() > filter.top) {
+                $('.filter-block').addClass('filter-block_fixed');
+                var h = $('.filter-block_fixed').outerHeight();
+                $('.sort').css('padding-top', h);
+            } else{
+                $('.filter-block').removeClass('filter-block_fixed');
+                $('.sort').css('padding-top', 0);
+            }
+        }
+        if ($(window).width() < 700) {
+            if($(window).scrollTop() > filter_sort.top) {
+                $('.filter-sort').addClass('filter-block_fixed');
+                var h = $('.filter-sort').outerHeight();
+                $('.catalog-container').css('padding-top', h);
+            } else{
+                $('.filter-sort').removeClass('filter-block_fixed');
+                $('.catalog-container').css('padding-top', 0);
+            }
+        }
+    });
+
 /*end fixed filter block*/
 
 

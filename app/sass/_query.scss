@@ -17,6 +17,11 @@
     .container {
         width: 100%;
     }
+    .filter-block_fixed{
+        .container {
+            padding: 0 15px;
+        }
+    }
 }
 
 
@@ -37,6 +42,7 @@
         margin-bottom: 30px;
         &:nth-of-type(4), &:nth-of-type(5){
             width: calc(50% - 30px);
+            margin-bottom: 0;
         }
     }
 
@@ -205,6 +211,12 @@
     .sort__total{
         margin: 15px 0 7px;
     }
+    .filter-sort{
+        padding: 8px 0;
+        &.filter-block_fixed{
+            margin: 0 8px;
+        }
+    }
 }
 
 @media only screen and (min-width: 701px){
@@ -324,6 +336,13 @@
     .page-title {
         font-size: 24px;
         margin: 0px 0 20px !important;
+    }
+    .paginate-move{
+        display: none;
+    }
+    .product{
+        width: 100%;
+       // margin: 8px 0;
     }
 }
 
