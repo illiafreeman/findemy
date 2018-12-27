@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 
     /*check filter*/
-    $('.filter__cat input').change(function(){
+    $('.filter__cat input[type="checkbox"]').change(function(){
         //console.log($(this).prop('checked'));
         if (this.checked) {
             $(this).parents('.filter__cat').addClass('filter__cat_act');
@@ -86,7 +86,7 @@ $(document).ready(function() {
         updateCounter();
     });
     function updateCounter() {
-        var len = $('.filter__cat input:checked').length;
+        var len = $('.filter__cat input[type="checkbox"]:checked').length;
         if(len>0){$('.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
     }
     $('.filter__title').click(function () {
@@ -97,6 +97,17 @@ $(document).ready(function() {
         $(this).parents('.filter').find('input').prop('checked', false).change();
     });
     /*end check filter*/
+
+
+
+    /*check sort*/
+    $('.filter__cat input[type="radio"]').change(function(){
+        if (this.checked) {
+            $('.filter__cat').removeClass('filter__cat_act');
+            $(this).parents('.filter__cat').addClass('filter__cat_act');
+        }
+    });
+    /*check sort*/
 
 
 

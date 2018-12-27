@@ -209,7 +209,7 @@
 
 @media only screen and (min-width: 701px){
     .filter_sort{
-        margin: 0;
+        margin: 10px 0;
         width: auto;
         border: 0;
         display: flex;
@@ -224,6 +224,11 @@
             padding: 0;
             height: auto;
             cursor: default;
+            text-transform: none;
+            font-family: $font;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-right: 20px;
             &:after{
                 display: none;
             }
@@ -244,9 +249,24 @@
         }
         .filter__cat{
             background: transparent;
+            height: 26px;
+            padding: 0;
+            margin: 0 12px;
             .filter__name{
                 color: $color-gray;
                 font-family: $font-bold;
+            }
+            &:hover{
+                .filter__name{
+                    color: $font-color;
+                }
+            }
+        }
+        .filter__cat_act{
+            border-bottom: 2px solid #e5e5e5;
+            .filter__name{
+                color: $font-color;
+
             }
         }
     }
@@ -254,6 +274,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .sort__total{
+        font-size: 13px;
     }
 }
 
