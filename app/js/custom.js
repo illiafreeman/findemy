@@ -111,6 +111,11 @@ $(document).ready(function() {
         distance: '5px',
         wheelStep: '50px'
     });
+
+
+    $(".filter_sort .filter__list").slimScroll({destroy: true});
+
+
     /*end slim scroll*/
 
 

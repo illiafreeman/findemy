@@ -191,6 +191,70 @@
     .filter-btn{
         display: block;
     }
+    .product {
+        width: calc(50% - 16px);
+        margin: 8px;
+    }
+    .filter-btn, .sort{
+        width: calc(50% - 16px);
+        margin: 0 8px;
+    }
+    .catalog-container, .filter-sort{
+        margin: 0 -8px;
+    }
+    .sort__total{
+        margin: 15px 0 7px;
+    }
+}
+
+@media only screen and (min-width: 701px){
+    .filter_sort{
+        margin: 0;
+        width: auto;
+        border: 0;
+        display: flex;
+        align-items: center;
+        &.filter_act{
+            box-shadow: none;
+            .filter__dropdown{
+                box-shadow: none;
+            }
+        }
+        .filter__title{
+            padding: 0;
+            height: auto;
+            cursor: default;
+            &:after{
+                display: none;
+            }
+        }
+        .filter__dropdown{
+            border: 0;
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+        }
+        .filter__list{
+            display: flex;
+
+        }
+        &:hover{
+            border: 0;
+        }
+        .filter__cat{
+            background: transparent;
+            .filter__name{
+                color: $color-gray;
+                font-family: $font-bold;
+            }
+        }
+    }
+    .sort{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -225,6 +289,18 @@
         &:after{
             top: 9px;
         }
+    }
+    .filter-btn, .sort{
+        margin: 8px 0;
+        width: 100%;
+    }
+    .filter-sort{
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    .page-title {
+        font-size: 24px;
+        margin: 0px 0 20px !important;
     }
 }
 
