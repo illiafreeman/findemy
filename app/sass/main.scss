@@ -734,9 +734,10 @@ body{
     .container{
         @extend %flex;
         padding: 0;
-
     }
-
+    &__close{
+        display: none;
+    }
     &_fixed{
         position: fixed;
         top: 0;

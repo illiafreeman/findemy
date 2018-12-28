@@ -184,6 +184,16 @@ var filter_sort = $('.filter-sort').offset();
         }
     });
 
+    $('.filter-btn').click(function(){
+        $('.filter-block').addClass('filter-block_act');
+        $('body').addClass('oh');
+    });
+
+    $('.filter-block__close').click(function(){
+        $('.filter-block').removeClass('filter-block_act');
+        $('body').removeClass('oh');
+    });
+
 /*end fixed filter block*/
 
 
