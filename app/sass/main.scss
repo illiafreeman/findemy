@@ -245,6 +245,7 @@ body{
                 position: relative;
                 &-photo{
                     background-image: url(../img/icon_photo.svg);
+                    cursor: not-allowed;
                 }
                 &-like{
                     background-image: url(../img/icon_favorite_normal.svg);
@@ -306,7 +307,7 @@ body{
         }
         &__link{
             //color: #969696 !important;
-
+            font-family: $font-reg;
         }
         &.hover{
             .header-submenu__link{
