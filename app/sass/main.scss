@@ -1,5 +1,6 @@
 @import 'plugins/normalize';
 @import 'plugins/owl.carousel.min';
+@import 'plugins/ion.rangeSlider.min';
 @import '_var';
 @import '_help';
 
@@ -334,6 +335,7 @@ body{
     transition: $transition;
     opacity: 0;
     visibility: hidden;
+    line-height: 1.2;
     &:after{
         @extend %after;
         width: 0;
@@ -973,9 +975,39 @@ body{
     }
 }
 
+.range{
+    padding: 15px 15px 0;
+    background: #fff;
+    .irs-from, .irs-to, .irs-single{
+        font-family: $font;
+        font-size: 13px;
+        background-color: #fff;
+        color: $font-color;
+        &:before{
+            display: none;
+        }
+    }
 
-
-
+    .irs-min, .irs-max{
+        display: none;
+    }
+    .irs--round .irs-handle{
+        border: 0;
+        background-color: black;
+        width: 8px;
+        height: 8px;
+        top: 33px;
+    }
+    .irs--round .irs-line {
+        height: 2px;
+        background: #e5e5e5;
+    }
+    .irs--round .irs-bar {
+        top: 36px;
+        height: 2px;
+        background-color: #111;
+    }
+}
 
 
 

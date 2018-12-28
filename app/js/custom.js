@@ -208,6 +208,16 @@ var filter_sort = $('.filter-sort').offset();
 
 
 
+$(".js-range-slider").ionRangeSlider({
+    skin: "round",
+    type: "double",
+    min: 0,
+    max: 10000,
+    from: 1000,
+    to: 7000,
+    grid: false,
+    postfix: ' p.'
+});
 
 
 
