@@ -83,12 +83,22 @@ $(document).ready(function() {
         }else{
             $(this).parents('.filter__cat').removeClass('filter__cat_act');
         }
-        updateCounter();
+        var id = $(this).parents('.filter').attr('id');
+        console.log(id);
+        //updateCounter();
+        var len = $('#' + id + ' .filter__cat input[type="checkbox"]:checked').length;
+        if(len>0){
+            $('#' + id + ' .filter__title span').text('('+len+')');
+            $('#' + id + '.filter').addClass('filter_sel');
+        }else{
+            $('#' + id + ' .filter__title span').text(' ');
+            $('#' + id + '.filter').removeClass('filter_sel');
+        }
     });
-    function updateCounter() {
-        var len = $('.filter__cat input[type="checkbox"]:checked').length;
-        if(len>0){$('.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
-    }
+/*    function updateCounter() {
+        var len = $('' + id + '.filter__cat input[type="checkbox"]:checked').length;
+        if(len>0){$('' + id + '.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
+    }*/
     $('.filter__title').click(function () {
         $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
         $(this).parents('.filter').toggleClass('filter_act');
