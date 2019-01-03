@@ -250,7 +250,7 @@ $(".js-range-slider").ionRangeSlider({
     grid: false,
     postfix: ' p.',
     onFinish: function(data){
-        if((data.from) > (data.min) || (data.to)<(data.max)){
+        if((data.from) > (data.min) || (data.to) < (data.max)){
             $('#f5').addClass('filter_sel');
         }else{
             $('#f5').removeClass('filter_sel');
@@ -258,7 +258,14 @@ $(".js-range-slider").ionRangeSlider({
     }
 });
 
+let my_range = $(".js-range-slider").data("ionRangeSlider");
 
-
-
+$('#f5 .filter__action-button_cancel').click(function(data){
+    my_range.reset();
+    if((data.from) > (data.min) || (data.to) < (data.max)){
+        $('#f5').addClass('filter_sel');
+    }else{
+        $('#f5').removeClass('filter_sel');
+    }
+});
 
