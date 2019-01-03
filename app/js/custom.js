@@ -131,6 +131,18 @@ $(document).ready(function() {
     });
 
     $('.filter__cat input[type="radio"]:checked').parents('.filter__cat').addClass('filter__cat_act');
+
+    if ($(window).width() < 700) {
+        $('.filter_sort .filter__title').html('сортировка');
+    }
+    $(window).resize(function() {
+        if ($(window).width() < 700) {
+            $('.filter_sort .filter__title').html('сортировка');
+        }else{
+            $('.filter_sort .filter__title').html('Сортировать:');
+        }
+    });
+
     /*check sort*/
 
 
