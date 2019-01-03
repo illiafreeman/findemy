@@ -127,6 +127,7 @@ $(document).ready(function() {
         if (this.checked) {
             $('.filter__cat').removeClass('filter__cat_act');
             $(this).parents('.filter__cat').addClass('filter__cat_act');
+            $(this).parents('.filter').removeClass('filter_act');
         }
     });
 
