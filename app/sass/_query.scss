@@ -45,6 +45,7 @@
             margin-bottom: 0;
         }
     }
+    
 
 
 }
@@ -72,6 +73,10 @@
     }
     .product{
         width: calc(33.333% - 30px);
+    }
+    .intro .page-title {
+        margin: 60px 0;
+        font-size: 40px;
     }
 
 }
@@ -253,6 +258,10 @@
             margin: 0 8px;
         }
     }
+    .intro .page-title {
+        margin: 40px 0 !important;
+        font-size: 28px;
+    }
 }
 
 @media only screen and (min-width: 701px){
@@ -379,6 +388,9 @@
     .product{
         width: 100%;
        // margin: 8px 0;
+    }
+    .intro .page-title {
+        font-size: 24px;
     }
 }
 
