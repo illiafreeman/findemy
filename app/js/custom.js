@@ -115,6 +115,11 @@ $(document).ready(function() {
         $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
         $(this).parents('.filter').toggleClass('filter_act');
     });
+    $('.filter__action-button').click(function () {
+        if(!$(this).hasClass('filter__action-button_cancel')) {
+            $(this).parents('.filter').removeClass('filter_act');
+        }
+    });
     $('.filter__action-button_cancel').click(function () {
         $(this).parents('.filter').find('input').prop('checked', false).change();
     });
@@ -245,8 +250,7 @@ $(".js-range-slider").ionRangeSlider({
     grid: false,
     postfix: ' p.',
     onFinish: function(data){
-        //console.log(data.from);
-        if((data.from)>0 || (data.to)<10000){
+        if((data.from) > (data.min) || (data.to)<(data.max)){
             $('#f5').addClass('filter_sel');
         }else{
             $('#f5').removeClass('filter_sel');
