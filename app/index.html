@@ -85,12 +85,18 @@
                         <h1 class="page-title">Выберите интересующий<br>вас раздел</h1>
                         <div class="intro-container">
                             <a href="" class="root-category">
-                                <img class="root-category__pic" src="img/main_m.jpg" alt="">
+                                <picture class="root-category__pic">
+                                    <source media="(max-width: 700px)" srcset="img/man@2x.jpg">
+                                    <img src="img/main_m.jpg" alt="">
+                                </picture>
                                 <span class="root-category__name root-category__name_left">мужчинам</span>
                             </a>
                             <a href="" class="root-category">
                                 <span class="root-category__name root-category__name_right">женщинам</span>
-                                <img class="root-category__pic" src="img/main_w.jpg" alt="">
+                                <picture class="root-category__pic">
+                                    <source media="(max-width: 700px)" srcset="img/woman@2x.jpg">
+                                    <img src="img/main_w.jpg" alt="">
+                                </picture>
                             </a>
                         </div>
                     </div>
