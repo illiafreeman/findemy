@@ -636,6 +636,12 @@ body{
             color: $font-color !important;
         }
     }
+    span.breadcrumbs__link{
+        &:hover{
+            color: #969696 !important;
+            cursor: default;
+        }
+    }
 }
 
 .page-title{
@@ -672,13 +678,21 @@ body{
         display: block;
         margin-bottom: 10px;
     }
+    &__link{
+        display: block;
+        &:hover{
+            .product__pic{
+                opacity: .15;
+            }
+        }
+    }
     &__pic{
         width: 100%;
         height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         display: block;
-        transition: $transition05;
+        transition: $transition;
         &:after{
             content: '';
             display: block;
@@ -717,24 +731,41 @@ body{
         width: 48px;
         height: 48px;
         background-color: #FFF;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-image: url(../img/icon_favorite_normal.svg);
-        display: block;
+        @extend %flex-c;
         position: absolute;
         top: 16px;
         right: 16px;
         cursor: pointer;
         border-radius: 50%;
+
+        i{
+            color: #111;
+            font-size: 24px;
+            transition: $transition;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+        }
+        .icon-heart{
+            opacity: 0;
+        }
+        .icon-heart-empty{
+            opacity: 1;
+        }
         &_act{
-            background-image: url(../img/icon_favorite_active.svg);
+            i{
+                color: #ff5151;
+            }
+            .icon-heart{
+                opacity: 1;
+            }
+            .icon-heart-empty{
+                opacity: 0;
+            }
         }
     }
-    &:hover{
-        .product__pic{
-            transform: scale(1.1);
-        }
-    }
+
 }
 
 .filter-block{
@@ -768,7 +799,15 @@ body{
     transition: $transition;
     &_sel{
         border-color: $font-color;
-        box-shadow: 0px 0px 1px 1px inset #111;
+        box-shadow: 0 0 0 1px inset $font-color;
+        &:hover{
+            border-color: $font-color !important;
+        }
+        &.filter_act{
+            &:hover{
+                border-color: #fff !important;
+            }
+        }
     }
     &-btn{
         border: 1px solid #e5e5e5;
@@ -949,6 +988,11 @@ body{
         &_dis{
             opacity: .2;
             cursor: not-allowed;
+            &:hover{
+                &:after{
+                    left: 0;
+                }
+            }
         }
         &_forward{
             padding: 0 40px 0 0;
@@ -961,6 +1005,14 @@ body{
                 &:after{
                     left: auto;
                     right: -8px;
+                }
+            }
+            &.paginate-move_dis{
+                &:hover{
+                    &:after{
+                        left: auto;
+                        right: 0;
+                    }
                 }
             }
         }

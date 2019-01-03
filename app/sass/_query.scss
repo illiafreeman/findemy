@@ -262,6 +262,13 @@
         margin: 40px 0 !important;
         font-size: 28px;
     }
+    .paginate{
+        justify-content: center;
+        .paginate-move{
+            display: none;
+        }
+    }
+
 }
 
 @media only screen and (min-width: 701px){
