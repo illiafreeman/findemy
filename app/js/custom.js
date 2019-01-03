@@ -129,6 +129,8 @@ $(document).ready(function() {
             $(this).parents('.filter__cat').addClass('filter__cat_act');
         }
     });
+
+    $('.filter__cat input[type="radio"]:checked').parents('.filter__cat').addClass('filter__cat_act');
     /*check sort*/
 
 
