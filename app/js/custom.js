@@ -240,10 +240,18 @@ $(".js-range-slider").ionRangeSlider({
     type: "double",
     min: 0,
     max: 10000,
-    from: 1000,
-    to: 7000,
+    from: 0,
+    to: 10000,
     grid: false,
-    postfix: ' p.'
+    postfix: ' p.',
+    onFinish: function(data){
+        //console.log(data.from);
+        if((data.from)>0 || (data.to)<10000){
+            $('#f5').addClass('filter_sel');
+        }else{
+            $('#f5').removeClass('filter_sel');
+        }
+    }
 });
 
 
