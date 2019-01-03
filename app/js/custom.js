@@ -61,6 +61,27 @@ $(document).ready(function() {
         loop:false,
         margin:0
     });
+    /*function callback() {
+        $('.owl-item').not('.center').find('a').click(function (event) {
+            alert('dfg');
+            event.stopPropagation();
+            event.preventDefault();
+        });
+    }*/
+    $('.nav-mobile__wrap .owl-item').click(function (event) {
+        if(!$(this).hasClass('center')) {
+            //alert('dfg');
+            event.stopPropagation();
+            event.preventDefault();
+            $(this).find('a').each(function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+            });
+        }
+        //event.stopPropagation();
+        //event.preventDefault();
+    });
+
     /*end mobile menu slider*/
 
 
