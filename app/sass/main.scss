@@ -549,8 +549,13 @@ body{
     margin: 0 15px;
     display: flex;
     flex-direction: column;
+    &:hover{
+        .root-category__pic{
+            opacity: 0.15;
+        }
+    }
     &__pic{
-
+        transition: $transition;
     }
     &__name{
         font-size: 16px;
