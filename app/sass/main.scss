@@ -809,6 +809,9 @@ body{
                 border-color: #fff !important;
             }
         }
+        .filter__action-button{
+            cursor: pointer;
+        }
     }
     &-btn{
         border: 1px solid #e5e5e5;
@@ -946,9 +949,9 @@ body{
             letter-spacing: 2px;
             border: 0;
             background: transparent;
-            cursor: pointer;
+            cursor: default;
             padding: 0;
-            &_cancel{
+            &_cancel, &_dis{
                 color: #969696;
             }
         }

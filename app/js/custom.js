@@ -102,12 +102,15 @@ $(document).ready(function() {
         if(len>0){
             $('#' + id + ' .filter__title span').text('('+len+')');
             $('#' + id + '.filter').addClass('filter_sel');
+            $('#' + id + '.filter').find('').addClass('filter_sel');
+
         }else{
             $('#' + id + ' .filter__title span').text(' ');
             $('#' + id + '.filter').removeClass('filter_sel');
+
         }
     });
-/*    function updateCounter() {
+    /*function updateCounter() {
         var len = $('' + id + '.filter__cat input[type="checkbox"]:checked').length;
         if(len>0){$('' + id + '.filter__title span').text('('+len+')');}else{$('.filter__title span').text(' ');}
     }*/
@@ -115,11 +118,13 @@ $(document).ready(function() {
         $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
         $(this).parents('.filter').toggleClass('filter_act');
     });
-    $('.filter__action-button').click(function () {
+
+    $(document).on('click','.filter_sel .filter__action-button',function(){
         if(!$(this).hasClass('filter__action-button_cancel')) {
             $(this).parents('.filter').removeClass('filter_act');
         }
     });
+
     $('.filter__action-button_cancel').click(function () {
         $(this).parents('.filter').find('input').prop('checked', false).change();
     });
