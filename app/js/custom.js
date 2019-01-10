@@ -119,14 +119,6 @@ $(document).ready(function() {
         $('.filter').removeClass('filter_act');
     });
 
-    /*$(document).on('click', function(event){
-        var $trigger = $(".filter__title");
-        //alert('sdf');
-        if($trigger !== event.target){
-            $('.filter').removeClass('filter_act');
-        }
-    });*/
-
     $('.filter__title').click(function (e) {
         e.stopPropagation();
         $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
@@ -299,6 +291,12 @@ $('#f5 .filter__action-button_cancel').click(function(data){
         $('#f5').find('.filter__action-button_ok').addClass('filter__action-button_dis');
     }
 });
+$('.range').click(function(e){
+    //alert('sdgf');
+    e.stopPropagation();
+});
+
+
 /*end range slider*/
 
 
