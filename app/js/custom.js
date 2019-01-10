@@ -102,11 +102,12 @@ $(document).ready(function() {
         if(len>0){
             $('#' + id + ' .filter__title span').text('('+len+')');
             $('#' + id + '.filter').addClass('filter_sel');
-            $('#' + id + '.filter').find('').addClass('filter_sel');
+            $('#' + id + '.filter').find('.filter__action-button_ok').removeClass('filter__action-button_dis');
 
         }else{
             $('#' + id + ' .filter__title span').text(' ');
             $('#' + id + '.filter').removeClass('filter_sel');
+            $('#' + id + '.filter').find('.filter__action-button_ok').addClass('filter__action-button_dis');
 
         }
     });
@@ -184,67 +185,66 @@ $(document).ready(function() {
 var filter = $('.filter-block').offset();
 var filter_sort = $('.filter-sort').offset();
 
-
-    $(window).scroll(function() {
-        if ($(window).width() > 700) {
-            if($(window).scrollTop() > filter.top) {
-                $('.filter-block').addClass('filter-block_fixed');
-                var h = $('.filter-block_fixed').outerHeight();
-                $('.sort').css('padding-top', h);
-            } else{
-                $('.filter-block').removeClass('filter-block_fixed');
-                $('.sort').css('padding-top', 0);
-            }
+$(window).scroll(function() {
+    if ($(window).width() > 700) {
+        if($(window).scrollTop() > filter.top) {
+            $('.filter-block').addClass('filter-block_fixed');
+            var h = $('.filter-block_fixed').outerHeight();
+            $('.sort').css('padding-top', h);
+        } else{
+            $('.filter-block').removeClass('filter-block_fixed');
+            $('.sort').css('padding-top', 0);
         }
-        if ($(window).width() < 700) {
-            if($(window).scrollTop() > filter_sort.top) {
-                $('.filter-sort').addClass('filter-block_fixed');
-                var h = $('.filter-sort').outerHeight();
-                $('.catalog-container').css('padding-top', h);
-            } else{
-                $('.filter-sort').removeClass('filter-block_fixed');
-                $('.catalog-container').css('padding-top', 0);
-            }
+    }
+    if ($(window).width() < 700) {
+        if($(window).scrollTop() > filter_sort.top) {
+            $('.filter-sort').addClass('filter-block_fixed');
+            var h = $('.filter-sort').outerHeight();
+            $('.catalog-container').css('padding-top', h);
+        } else{
+            $('.filter-sort').removeClass('filter-block_fixed');
+            $('.catalog-container').css('padding-top', 0);
         }
-    });
+    }
+});
 
-    $(window).resize(function() {
-        if ($(window).width() > 700) {
-            if($(window).scrollTop() > filter.top) {
-                $('.filter-block').addClass('filter-block_fixed');
-                var h = $('.filter-block_fixed').outerHeight();
-                $('.sort').css('padding-top', h);
-            } else{
-                $('.filter-block').removeClass('filter-block_fixed');
-                $('.sort').css('padding-top', 0);
-            }
+$(window).resize(function() {
+    if ($(window).width() > 700) {
+        if($(window).scrollTop() > filter.top) {
+            $('.filter-block').addClass('filter-block_fixed');
+            var h = $('.filter-block_fixed').outerHeight();
+            $('.sort').css('padding-top', h);
+        } else{
+            $('.filter-block').removeClass('filter-block_fixed');
+            $('.sort').css('padding-top', 0);
         }
-        if ($(window).width() < 700) {
-            if($(window).scrollTop() > filter_sort.top) {
-                $('.filter-sort').addClass('filter-block_fixed');
-                var h = $('.filter-sort').outerHeight();
-                $('.catalog-container').css('padding-top', h);
-            } else{
-                $('.filter-sort').removeClass('filter-block_fixed');
-                $('.catalog-container').css('padding-top', 0);
-            }
+    }
+    if ($(window).width() < 700) {
+        if($(window).scrollTop() > filter_sort.top) {
+            $('.filter-sort').addClass('filter-block_fixed');
+            var h = $('.filter-sort').outerHeight();
+            $('.catalog-container').css('padding-top', h);
+        } else{
+            $('.filter-sort').removeClass('filter-block_fixed');
+            $('.catalog-container').css('padding-top', 0);
         }
-    });
+    }
+});
 
-    $('.filter-btn').click(function(){
-        $('.filter-block').addClass('filter-block_act');
-        $('body').addClass('oh');
-    });
+$('.filter-btn').click(function(){
+    $('.filter-block').addClass('filter-block_act');
+    $('body').addClass('oh');
+});
 
-    $('.filter-block__close').click(function(){
-        $('.filter-block').removeClass('filter-block_act');
-        $('body').removeClass('oh');
-    });
+$('.filter-block__close').click(function(){
+    $('.filter-block').removeClass('filter-block_act');
+    $('body').removeClass('oh');
+});
 
 /*end fixed filter block*/
 
 
-
+/*range slider*/
 $(".js-range-slider").ionRangeSlider({
     skin: "round",
     type: "double",
@@ -257,8 +257,10 @@ $(".js-range-slider").ionRangeSlider({
     onFinish: function(data){
         if((data.from) > (data.min) || (data.to) < (data.max)){
             $('#f5').addClass('filter_sel');
+            $('#f5').find('.filter__action-button_ok').removeClass('filter__action-button_dis');
         }else{
             $('#f5').removeClass('filter_sel');
+            $('#f5').find('.filter__action-button_ok').addClass('filter__action-button_dis');
         }
     }
 });
@@ -269,8 +271,39 @@ $('#f5 .filter__action-button_cancel').click(function(data){
     my_range.reset();
     if((data.from) > (data.min) || (data.to) < (data.max)){
         $('#f5').addClass('filter_sel');
+        $('#f5').find('.filter__action-button_ok').removeClass('filter__action-button_dis');
     }else{
         $('#f5').removeClass('filter_sel');
+        $('#f5').find('.filter__action-button_ok').addClass('filter__action-button_dis');
     }
 });
+/*end range slider*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
