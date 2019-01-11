@@ -1045,7 +1045,7 @@ body{
             &_nolink{
                 cursor: default;
                 &:hover{
-                    border-bottom: 2px solid transparent;
+                    border-bottom: 2px solid transparent !important;
                 }
             }
             &_act{

@@ -235,6 +235,7 @@
         color: $color-gray;
         margin-top: 15px;
         text-align: right;
+        transition: $transition;
     }
     .filter-btn{
         display: block;
@@ -256,7 +257,14 @@
     .filter-sort{
         padding: 8px 0;
         &.filter-block_fixed{
-            margin: 0 8px;
+            margin: 0;
+            padding: 8px;
+            .sort__total{
+                opacity: 0;
+                visibility: hidden;
+                margin: 0;
+                height: 0;
+            }
         }
     }
     .intro .page-title {
@@ -399,6 +407,9 @@
     }
     .intro .page-title {
         font-size: 24px;
+    }
+    .filter-sort.filter-block_fixed {
+        padding: 8px 16px;
     }
 }
 
