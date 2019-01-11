@@ -10,6 +10,15 @@
         width: 100%;
         padding: 60px 50px 40px;
     }
+    .container {
+        width: 100%;
+        padding: 0 50px;
+    }
+    .filter-block_fixed{
+        .container {
+            padding: 0 50px;
+        }
+    }
 
 }
 
@@ -17,11 +26,7 @@
     .container {
         width: 100%;
     }
-    .filter-block_fixed{
-        .container {
-            padding: 0 15px;
-        }
-    }
+    
 }
 
 
@@ -68,6 +73,9 @@
         height: 70px;
         padding: 0 25px;
     }
+    .container {
+        padding: 0 25px;
+    }
     .footer {
         padding: 25px 25px 40px;
     }
@@ -78,7 +86,11 @@
         margin: 60px 0;
         font-size: 40px;
     }
-
+    .filter-block_fixed{
+        .container {
+            padding: 0 25px;
+        }
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -258,7 +270,7 @@
         padding: 8px 0;
         &.filter-block_fixed{
             margin: 0;
-            padding: 7px;
+            padding: 15px;
             .sort__total{
                 opacity: 0;
                 visibility: hidden;
