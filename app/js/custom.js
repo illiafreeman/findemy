@@ -116,11 +116,11 @@ $(document).ready(function() {
 
     $('body').click(function () {
         //alert('sdf');
-        $('.filter').removeClass('filter_act');
+        /////////$('.filter').removeClass('filter_act');
     });
 
     $('.filter__title').click(function (e) {
-        //////////////e.stopPropagation();
+        ////////////e.stopPropagation();
         $('.filter').not($(this).parents('.filter')).removeClass('filter_act');
         $(this).parents('.filter').toggleClass('filter_act');
     });
@@ -274,7 +274,10 @@ $('.filter').each(function() {
         //console.log($(this).offset().top - $(window).scrollTop());
         //$('.filter-block').scrollTop($(this).offset().top - $(window).scrollTop() + 100);
           //$('.filter-block').scrollTop();
-        $('.filter-block').scrollTop(off - 50);
+        //$('.filter-block').scrollTop(off - 50);
+        $('.filter-block').animate({
+            scrollTop: (off - 50)
+        }, 800);
     });
 });
 
