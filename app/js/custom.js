@@ -345,16 +345,17 @@ $('.range').click(function(e){
 
 
 owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
+    //$('.owl-next').html('<div id="circ"></div>');
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
         // This has to be the same size as the maximum width to
         // prevent clipping
-        strokeWidth: 4,
+        strokeWidth: 2,
         trailWidth: 1,
         easing: 'linear',
         duration: 5000,
-        from: { color: '#aaa', width: 4 },
-        to: { color: '#aaa', width: 4 },
+        from: { color: '#aaa', width: 2 },
+        to: { color: '#aaa', width: 2 },
         // Set default step function for all animate calls
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
@@ -362,10 +363,11 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
         }
     });
 
+
     bar.animate(1.0);  // Number from 0.0 to 1.0
 
     var carousel = e.relatedTarget;
-    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    $('.home-slider__counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
 
 }).owlCarousel({
     center: true,
@@ -375,11 +377,15 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     nav: true,
+    dots: false,
     //autoHeight: true,
     autoplayTimeout: 5000,
-    autoplay: true
+    //autoplay: true
 });
 
+$('#circ').click(function() {
+    owl.trigger('next.owl.carousel');
+});
 
 
 
@@ -422,18 +428,18 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
 */
 $('.home-slider').on('changed.owl.carousel', function(e) {
     owl.trigger('stop.owl.autoplay');
-    owl.trigger('play.owl.autoplay');
+    //owl.trigger('play.owl.autoplay');
     $('#circ').empty();
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
         // This has to be the same size as the maximum width to
         // prevent clipping
-        strokeWidth: 4,
+        strokeWidth: 2,
         trailWidth: 1,
         easing: 'linear',
         duration: 5000,
-        from: { color: '#aaa', width: 4 },
-        to: { color: '#aaa', width: 4 },
+        from: { color: '#aaa', width: 2 },
+        to: { color: '#aaa', width: 2 },
         // Set default step function for all animate calls
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);

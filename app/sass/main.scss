@@ -338,6 +338,7 @@ body{
     opacity: 0;
     visibility: hidden;
     line-height: 1.2;
+    z-index: 1000;
     &:after{
         @extend %after;
         width: 0;
@@ -1103,8 +1104,9 @@ body{
             width: 300px;
             height: 250px;
             position: absolute;
-            right: 0;
-            top: 200px;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
         }
         &__info{
             position: absolute;
@@ -1116,10 +1118,17 @@ body{
             bottom: 0;
             justify-content: center;
         }
+        &__title{
+            font-size: 48px;
+            font-family: $font;
+            line-height: 56px;
+            margin-bottom: 35px;
+        }
         .owl-nav{
             position: absolute;
-            top: 200px;
-            right: 0;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
             .owl-prev{
                 display: none;
             }
@@ -1131,23 +1140,58 @@ body{
                 }
             }
         }
+        &__counter{
+            position: absolute;
+            bottom: 45px;
+        }
     }
     .animated  {
         animation-duration : .5s;
     }
+    &-intro{
+        position: relative;
+    }
 }
 
 #circ{
-    margin: 20px;
     width: 70px;
     height: 70px;
     position: absolute;
-    right: 0;
-    top: 200px;
+    right: 170px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1000;
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    &:after{
+        @extend %after;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../img/arrow_slider.svg) center center no-repeat;
+    }
 }
 
-
+.button{
+    display: flex;
+    height: 60px;
+    padding: 0 30px;
+    @extend %flex;
+    background: #FFF;
+    align-self: flex-start;
+    font-size: 16px;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: $transition;
+    &:hover{
+        background: transparent;
+    }
+}
 
 
 
