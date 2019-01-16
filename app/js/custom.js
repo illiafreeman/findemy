@@ -364,6 +364,9 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
 
     bar.animate(1.0);  // Number from 0.0 to 1.0
 
+    var carousel = e.relatedTarget;
+    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+
 }).owlCarousel({
     center: true,
     items: 1,
@@ -372,7 +375,7 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     nav: true,
-    autoHeight: true,
+    //autoHeight: true,
     autoplayTimeout: 5000,
     autoplay: true
 });
@@ -435,15 +438,13 @@ $('.home-slider').on('changed.owl.carousel', function(e) {
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('stroke-width', state.width);
-
-
-
         }
     });
 
     bar.animate(1.0);  // Number from 0.0 to 1.0
 
-
+    var carousel = e.relatedTarget;
+    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
 });
 /*end home slider*/
 
