@@ -1,4 +1,5 @@
 @import 'plugins/normalize';
+@import 'plugins/animate';
 @import 'plugins/owl.carousel.min';
 @import 'plugins/ion.rangeSlider.min';
 @import '_var';
@@ -1092,11 +1093,59 @@ body{
     }
 }
 
+.home{
+    &-slider{
+        position: relative;
+        &__item{
+            position: relative;
+        }
+        &__preview{
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            right: 0;
+            top: 200px;
+        }
+        &__info{
+            position: absolute;
+            z-index: 1000;
+            top: 0;
+            left: 200px;
+            display: flex;
+            flex-direction: column;
+            bottom: 0;
+            justify-content: center;
+        }
+        .owl-nav{
+            position: absolute;
+            top: 200px;
+            right: 0;
+            .owl-prev{
+                display: none;
+            }
+            .owl-next{
+                width: 300px;
+                height: 250px;
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+    .animated  {
+        animation-duration : .5s;
+    }
+}
 
-
-
-
-
+#circ{
+    margin: 20px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    z-index: 1000;
+}
 
 
 

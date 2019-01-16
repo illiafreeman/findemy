@@ -338,12 +338,114 @@ $('.range').click(function(e){
     //alert('sdgf');
     e.stopPropagation();
 });
-
-
 /*end range slider*/
 
 
+/*home slider*/
 
+
+owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
+    var bar = new ProgressBar.Circle(circ, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'linear',
+        duration: 5000,
+        from: { color: '#aaa', width: 4 },
+        to: { color: '#aaa', width: 4 },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+        }
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+
+}).owlCarousel({
+    center: true,
+    items: 1,
+    loop: true,
+    margin: 0,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+    nav: true,
+    autoHeight: true,
+    autoplayTimeout: 5000,
+    autoplay: true
+});
+
+
+
+
+/*$('.home-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+    //alert('sdf');
+    if (!e.namespace)  {
+        return;
+    }
+    var carousel = e.relatedTarget;
+    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+
+});*/
+
+/*$('.home-slider').on('initialized.owl.carousel', function(e) {
+    alert('sdf');
+    var bar = new ProgressBar.Circle(circ, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'linear',
+        duration: 5000,
+        from: { color: '#aaa', width: 4 },
+        to: { color: '#aaa', width: 4 },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+
+
+        }
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+
+
+});
+*/
+$('.home-slider').on('changed.owl.carousel', function(e) {
+    owl.trigger('stop.owl.autoplay');
+    owl.trigger('play.owl.autoplay');
+    $('#circ').empty();
+    var bar = new ProgressBar.Circle(circ, {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'linear',
+        duration: 5000,
+        from: { color: '#aaa', width: 4 },
+        to: { color: '#aaa', width: 4 },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+
+
+        }
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+
+
+});
+/*end home slider*/
 
 
 
