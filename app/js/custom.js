@@ -367,7 +367,7 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     bar.animate(1.0);  // Number from 0.0 to 1.0
 
     var carousel = e.relatedTarget;
-    $('.home-slider__counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    $('.home-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
 
 }).owlCarousel({
     center: true,
@@ -380,10 +380,10 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     dots: false,
     //autoHeight: true,
     autoplayTimeout: 5000,
-    //autoplay: true
+    autoplay: true
 });
 
-$('#circ').click(function() {
+$('#circ, .home-slider__preview').click(function() {
     owl.trigger('next.owl.carousel');
 });
 
@@ -428,7 +428,7 @@ $('#circ').click(function() {
 */
 $('.home-slider').on('changed.owl.carousel', function(e) {
     owl.trigger('stop.owl.autoplay');
-    //owl.trigger('play.owl.autoplay');
+    owl.trigger('play.owl.autoplay');
     $('#circ').empty();
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
@@ -450,7 +450,7 @@ $('.home-slider').on('changed.owl.carousel', function(e) {
     bar.animate(1.0);  // Number from 0.0 to 1.0
 
     var carousel = e.relatedTarget;
-    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    $('.home-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
 });
 /*end home slider*/
 
