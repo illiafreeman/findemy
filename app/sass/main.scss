@@ -1270,7 +1270,14 @@ body{
     }
     &-blog{
         &__all{
-        
+            font-size: 16px;
+            font-family: $font-bold;
+            text-transform: uppercase;
+            position: relative;
+            height: 60px;
+            line-height: 1;
+            letter-spacing: 2px;
+            padding-right: 40px;
         }
     }
     &-trand{
