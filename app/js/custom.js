@@ -388,7 +388,6 @@ $('#circ, .home-slider__preview').click(function() {
 });
 
 
-
 /*$('.home-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     //alert('sdf');
     if (!e.namespace)  {
