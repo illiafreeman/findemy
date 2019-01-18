@@ -1225,11 +1225,68 @@ body{
     }
 }
 
+.home{
+    &-collection{
+        &__all{
+        
+        }
+    }
+    &-blog{
+        &__all{
+        
+        }
+    }
+    &-trand{
+        &__all{
+        
+        }
+    }
+}
 
+.collection{
+    &-pic{
+    
+    }
+    &-desc{
+    
+    }
+    &-title{
+    
+    }
+    &-text{
+    
+    }
+    .button{
+    
+    }
+    &_left{
+    
+    }
+}
 
-
-
-
+.blog{
+    &__pic{
+    
+    }
+    &__date{
+    
+    }
+    &__desc{
+    
+    }
+    &__title{
+    
+    }
+    &__like{
+    
+    }
+    &__text{
+    
+    }
+    &_top{
+    
+    }
+}
 
 
 
