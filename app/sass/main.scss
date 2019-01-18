@@ -1095,6 +1095,9 @@ body{
 }
 
 .home{
+    &-intro{
+        margin-bottom: 100px;
+    }
     &-slider{
         position: relative;
         &__item{
@@ -1223,12 +1226,46 @@ body{
     &:hover{
         background: transparent;
     }
+    &_gray{
+        background-color: #F0F0F0;
+    }
 }
 
 .home{
+    
     &-collection{
         &__all{
-        
+            font-size: 16px;
+            font-family: $font-bold;
+            text-transform: uppercase;
+            position: relative;
+            height: 20px;
+            line-height: 1;
+            letter-spacing: 2px;
+            padding-right: 40px;
+            
+            &:after{
+                @extend %after;
+                width: 26px;
+                height: 26px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                transition: $transition;
+                background-image: url(../img/arrow_link.svg);
+                right: 0;
+                top: -4px;
+            }
+            &:hover{
+                &:after{
+                    right: -8px;
+                }
+            }
+            &-wrap{
+                transform: translateY(20px);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
         }
     }
     &-blog{
@@ -1244,23 +1281,46 @@ body{
 }
 
 .collection{
-    &-pic{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 120px;
     
+    &-pic{
+        width: 678px;
+        flex: 0 0 678px;
     }
     &-desc{
-    
+        margin-top: 72px;
     }
     &-title{
-    
+        transform: translateX(-90px);
+        font-size: 48px;
+        line-height: 56px;
+        font-family: $font;
+        margin-bottom: 45px;
     }
     &-text{
-    
+        margin-left: 150px;
+        color: #969696;
+        font-size: 24px;
+        font-family: $font;
+        width: 420px;
+        line-height: 32px;
+        margin-bottom: 26px;
     }
     .button{
-    
+        margin-left: 150px;
+        display: inline-flex;
     }
     &_left{
-    
+        .collection-title{
+            transform: translateX(140px);
+            width: 120%;
+        }
+        .collection-text, .button{
+            margin-left: 250px;
+        }
     }
 }
 
