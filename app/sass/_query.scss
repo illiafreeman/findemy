@@ -44,7 +44,7 @@
     }
     .filter{
         width: calc(33.333% - 30px);
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         &:nth-of-type(4), &:nth-of-type(5){
             width: calc(50% - 30px);
             margin-bottom: 0;

@@ -997,7 +997,7 @@ body{
             background-repeat: no-repeat;
             background-image: url(../img/icon_back.svg);
             left: 0;
-            top: -1px;
+            top: -2px;
             transition: $transition;
         }
         &:hover{
@@ -1119,21 +1119,28 @@ body{
             background-repeat: no-repeat;
             background-size: 340px 270px;
             img{
-                width: 100% !important;
-                height: 100% !important;
-                object-fit: cover;
+                width: 323px !important;
+                height: 270px !important;
+                //object-fit: cover;
                 max-width: none !important;
                 transition: $transition;
+                position: absolute;
+                top: -10px;
+                left: -12px;
+
             }
             &:hover{
                 //transform: scale(1.1);
                 //padding: 0;
-                width: 340px;
-                height: 270px;
+                width: 323px !important;
+                height: 270px !important;
                 margin-top: -135px;
-                right: 40px;
+                right: 52px;
                 img{
-                    //transform: scale(.85);
+                    top: 0;
+                    left: 0;
+                    width: 323px !important;
+                    height: 270px !important;
                 }
             }
         }

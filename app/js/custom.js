@@ -342,8 +342,6 @@ $('.range').click(function(e){
 
 
 /*home slider*/
-
-
 owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     //$('.owl-next').html('<div id="circ"></div>');
     var bar = new ProgressBar.Circle(circ, {
@@ -364,7 +362,7 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     });
 
 
-    bar.animate(1.0);  // Number from 0.0 to 1.0
+    //bar.animate(1.0);  // Number from 0.0 to 1.0
 
     var carousel = e.relatedTarget;
     $('.home-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
@@ -380,54 +378,16 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     dots: false,
     //autoHeight: true,
     autoplayTimeout: 5000,
-    autoplay: true
+    //autoplay: true
 });
 
 $('#circ, .home-slider__preview').click(function() {
     owl.trigger('next.owl.carousel');
 });
 
-
-/*$('.home-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
-    //alert('sdf');
-    if (!e.namespace)  {
-        return;
-    }
-    var carousel = e.relatedTarget;
-    $('.slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
-
-});*/
-
-/*$('.home-slider').on('initialized.owl.carousel', function(e) {
-    alert('sdf');
-    var bar = new ProgressBar.Circle(circ, {
-        color: '#aaa',
-        // This has to be the same size as the maximum width to
-        // prevent clipping
-        strokeWidth: 4,
-        trailWidth: 1,
-        easing: 'linear',
-        duration: 5000,
-        from: { color: '#aaa', width: 4 },
-        to: { color: '#aaa', width: 4 },
-        // Set default step function for all animate calls
-        step: function(state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-
-
-
-        }
-    });
-
-    bar.animate(1.0);  // Number from 0.0 to 1.0
-
-
-});
-*/
 $('.home-slider').on('changed.owl.carousel', function(e) {
     owl.trigger('stop.owl.autoplay');
-    owl.trigger('play.owl.autoplay');
+    //owl.trigger('play.owl.autoplay');
     $('#circ').empty();
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
