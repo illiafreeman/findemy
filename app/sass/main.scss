@@ -1333,27 +1333,83 @@ body{
 }
 
 .blog{
-    
+    display: flex;
+    width: calc(33.333% - 30px);
+    margin: 0 15px;
+    position: relative;
+    flex-direction: column;
+    &:hover{
+        .blog__pic{
+            opacity: .85;
+        }
+    }
     &__pic{
-    
+        transition: $transition;
+        &-wrap{
+            position: relative;
+            display: block;
+        }
     }
     &__date{
-    
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        background-color: #FFF;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        @extend %flex;
+        justify-content: center;
+        letter-spacing: 2px;
     }
     &__desc{
     
     }
     &__title{
-    
+        color: #969696;
+        font-size: 13px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        height: 50px;
+        padding-top: 10px;
+        @extend %flex;
     }
     &__like{
-    
+        padding-left: 32px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-image: url(../img/like_gray.svg);
+        font-size: 16px;
     }
     &__text{
-    
+        font-size: 24px;
+        font-family: $font;
+        line-height: 32px;
+        display: block;
+        overflow: hidden;
+        height: 64px;
     }
     &_top{
-    
+        .blog__desc{
+            order: -1;
+        }
+        .blog__title{
+            padding-top: 0;
+            align-items: flex-start;
+            height: 30px;
+            margin-top: -5px;
+        }
+        .blog__text{
+            margin-bottom: 25px;
+        }
+    }
+    &-wrap{
+        @extend %flex;
+        margin: 0 -15px 100px;
+        align-items: flex-start;
     }
 }
 
@@ -1388,8 +1444,11 @@ body{
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            height: 90px;
+            height: 80px;
         }
+    }
+    .container{
+    
     }
 }
 
