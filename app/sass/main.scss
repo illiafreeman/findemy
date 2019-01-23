@@ -1363,9 +1363,14 @@ body{
     &-pic{
         width: 678px;
         flex: 0 0 678px;
+        transition: $transition;
+        &:hover{
+            opacity: .85;
+        }
     }
     &-desc{
         margin-top: 72px;
+        z-index: 100;
     }
     &-title{
         transform: translateX(-90px);
@@ -1395,7 +1400,6 @@ body{
         .collection-text, .button{
             margin-left: 250px;
         }
-        margin-bottom: 90px;
     }
 }
 
@@ -1475,7 +1479,7 @@ body{
     }
     &-wrap{
         @extend %flex;
-        margin: 0 -15px 100px;
+        margin: 0 -15px 120px;
         align-items: flex-start;
     }
 }
