@@ -1099,6 +1099,9 @@ body{
         margin-bottom: 100px;
     }
     &-slider{
+        .owl-stage{
+            background: #eeeeee;
+        }
         position: relative;
         &__pic{
             height: 536px;
@@ -1168,11 +1171,11 @@ body{
         .owl-item{
             //transition: $transition05;
             z-index: 1;
-            -webkit-backface-visibility: hidden !important;
-            backface-visibility: hidden !important;
-            -webkit-transform: translateZ(0) scale(1.0, 1.0) !important;
-            transform: translateZ(0) scale(1.0, 1.0) !important;
-            //transform: translate3d(0, 0, 0);
+            //-webkit-backface-visibility: hidden !important;
+            //backface-visibility: hidden !important;
+            //-webkit-transform: translateZ(0) scale(1.0, 1.0) !important;
+            //transform: translateZ(0) scale(1.0, 1.0) !important;
+            transform: translate3d(0, 0, 0);
         }
         .owl-item.center{
             .home-slider__preview{
