@@ -340,7 +340,7 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     dots: false,
     autoplayTimeout: 5000,
     mouseDrag: false,
-    //autoplay: true
+    autoplay: true
 });
 
 $('#circ, .home-slider__preview').click(function() {
