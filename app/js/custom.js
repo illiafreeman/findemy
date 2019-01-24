@@ -311,13 +311,13 @@ $('.range').click(function(e){
 
 /*home slider*/
 var bar = new ProgressBar.Circle(circ, {
-    color: '#aaa',
+    color: '#e5e5e5',
     strokeWidth: 2,
-    trailWidth: 1,
+    trailWidth: 0,
     easing: 'linear',
     duration: 5000,
-    from: { color: '#aaa', width: 2 },
-    to: { color: '#aaa', width: 2 },
+    from: { color: '#e5e5e5', width: 2 },
+    to: { color: '#e5e5e5', width: 2 },
     step: function(state, circle) {
         circle.path.setAttribute('stroke', state.color);
         circle.path.setAttribute('stroke-width', state.width);
@@ -361,11 +361,11 @@ $('.home-slider').on('changed.owl.carousel', function(e) {
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
         strokeWidth: 2,
-        trailWidth: 1,
+        trailWidth: 0,
         easing: 'linear',
         duration: 5000,
-        from: { color: '#aaa', width: 2 },
-        to: { color: '#aaa', width: 2 },
+        from: { color: '#e5e5e5', width: 2 },
+        to: { color: '#e5e5e5', width: 2 },
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('stroke-width', state.width);
