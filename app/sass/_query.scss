@@ -5,6 +5,9 @@
             right: 392px;
         }
     }
+    .home-slider__info .button {
+        bottom: 180px;
+    }
 }
 
 @media only screen and (max-width: 1850px) {
@@ -35,7 +38,17 @@
     .container {
         width: 100%;
     }
-    
+    .home-slider__info{
+        margin-left: -50%;
+    }
+    .home-slider__pic{
+        overflow: hidden;
+        height: 640px;
+    }
+    .home-slider .owl-item .home-slider__pic img{
+        width: auto;
+        height: 100%;
+    }
 }
 
 
