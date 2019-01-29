@@ -49,6 +49,42 @@
         width: auto;
         height: 100%;
     }
+    .collection-pic {
+        width: 452px;
+        height: 452px;
+        flex: 0 0 452px;
+        overflow: hidden;
+        img{
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .collection{
+        margin-bottom: 95px;
+    }
+    .home-intro {
+        margin-bottom: 75px;
+    }
+    .collection-title{
+        font-size: 40px;
+        line-height: 48px;
+    }
+    .collection-text, .collection .button {
+        margin-left: 75px;
+    }
+    .collection_left .collection-title {
+        transform: translateX(47px);
+    }
+    .collection_left .collection-text, .collection_left .button {
+        margin-left: 120px;
+    }
+    .collection.collection_left, .blog-wrap {
+        margin-bottom: 75px;
+    }
+    .home-trand__all{
+        height: 80px;
+    }
 }
 
 
@@ -57,7 +93,7 @@
     .header-nav__item_devider, .header-nav__item_sub{
         display: none;
     }
-    .footer-menu__cat {
+    .footer-menu__cat{
         width: auto;
         padding-right: 80px;
     }
@@ -113,6 +149,11 @@
             padding: 0 25px;
         }
     }
+    .home-trand{
+        .product {
+            width: calc(25% - 30px);
+        }
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -135,7 +176,28 @@
     .soc {
         margin: 20px 0 0 -11px;
     }
-
+    .home-slider__pic {
+        height: 480px;
+    }
+    .home-slider__title {
+        font-size: 34px;
+        line-height: 45px;
+    }
+    .home-slider__preview {
+        width: 200px;
+        height: 150px;
+        margin-top: -75px;
+        img{
+            width: auto !important;
+            height: auto !important;
+            object-fit: cover !important;
+            max-width: 100% !important;
+            left: auto !important;
+            top: auto !important;
+            position: static !important;
+            margin: 0 !important;
+        }
+    }
 }
 
 @media only screen and (max-width: 800px){
