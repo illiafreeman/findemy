@@ -221,10 +221,10 @@
         padding-bottom: 40px;
     }
     .home-slider__info .button {
-        bottom: 102px;
+        bottom: 68px;
     }
     .home-intro {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .collection-pic {
         width: 300px;
@@ -269,21 +269,35 @@
     .home-slider{
         .owl-nav{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             transform: none;
             position: static;
             .owl-prev, .owl-next{
                 display: block;
                 width: 50px;
                 height: 50px;
-                margin: 0 10px;
+                margin: 0 60px;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
                 span{
                     display: none;
                 }
             }
+            .owl-next{
+                background-image: url(../img/arrow_slider.svg) !important;
+            }
+            .owl-prev{
+                background-image: url(../img/arrow_slider_prev.svg) !important;
+            }
         }
-        
-
+    }
+    .owl-carousel .owl-stage-outer{
+        overflow: visible;
+    }
+    .home-slider__counter{
+        bottom: -37px;
+        left: 50%;
+        transform:translateX(-50%);
     }
     
 }
@@ -299,6 +313,9 @@
         width: 100%;
         height: auto;
         flex: 0 0 100%;
+        img{
+            width: 100%;
+        }
     }
     .collection-title, .collection-text{
         margin-left: 24px;
