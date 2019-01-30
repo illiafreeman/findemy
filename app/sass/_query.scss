@@ -205,7 +205,7 @@
     }
     .home-trand{
         .product{
-            width: calc(33.333% - 30px);
+            width: calc(33.333% - 16px);
             &:last-child{
                 display: none;
             }
@@ -269,7 +269,92 @@
 }
 
 @media only screen and (max-width: 800px){
-
+    .collection{
+        flex-direction: column;
+        .button{
+            margin-left: 24px;
+        }
+    }
+    .collection-pic {
+        width: 100%;
+        height: auto;
+        flex: 0 0 100%;
+    }
+    .collection-title, .collection-text{
+        margin-left: 24px;
+    }
+    .collection-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 24px;
+    }
+    .collection-text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .collection_left{
+        margin-bottom: 45px !important;
+        .collection-pic{
+            order: 0;
+        }
+        .collection-desc{
+            order: 1;
+            padding: 0;
+            text-align: left;
+            .collection-text{
+                margin-left: 24px;
+            }
+        }
+    }
+    .home-blog{
+        .blog-wrap{
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .blog {
+            width: calc(100% - 30px);
+            .blog__pic{
+                img{
+                    width: 100%;
+                }
+            }
+            .blog__text{
+                font-size: 16px;
+                line-height: 24px;
+                height: auto;
+                padding-bottom: 30px;
+                margin: 0;
+            }
+        }
+        .blog_top{
+            .blog__pic-wrap{
+                order: 0;
+            }
+            .blog__desc{
+                order: 1;
+                .blog__title{
+                    padding-top: 10px;
+                    height: 50px;
+                    align-items: center;
+                }
+                .blog__text{
+                
+                }
+            }
+        }
+    }
+    .home-trand {
+        .product-wrap{
+            flex-direction: column;
+        }
+        .product {
+            width: calc(100% - 16px);
+            margin-bottom: 15px;
+            .product__desc{
+                height: auto;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 768px){
