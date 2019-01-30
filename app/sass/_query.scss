@@ -214,6 +214,58 @@
     .collection, .blog-wrap {
         margin-bottom: 50px;
     }
+    .home-slider__pic {
+        height: 400px;
+    }
+    .home-slider__title{
+        padding-bottom: 40px;
+    }
+    .home-slider__info .button {
+        bottom: 102px;
+    }
+    .home-intro {
+        margin-bottom: 40px;
+    }
+    .collection-pic {
+        width: 300px;
+        height: 300px;
+        flex: 0 0 300px;
+    }
+    .collection-desc {
+        margin-top: 0px;
+        z-index: 100;
+    }
+    .collection-title {
+        transform: none;
+        margin-left: 40px;
+    }
+    .collection-title {
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 24px;
+    }
+    .collection-text, .collection .button {
+        margin-left: 40px;
+    }
+    .collection-text{
+        width: auto;
+    }
+    .home-collection__all-wrap{
+        transform: none;
+        height: 50px;
+        align-items: flex-start;
+    }
+    .collection_left .collection-title {
+        transform: none;
+        width: auto;
+    }
+    .collection_left .collection-desc {
+        padding-right: 40px;
+        text-align: right;
+    }
+    .home-blog__all-wrap {
+        justify-content: flex-end;
+    }
 }
 
 @media only screen and (max-width: 800px){
