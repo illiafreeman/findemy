@@ -1104,13 +1104,15 @@ body{
         }
         position: relative;
         &__pic{
-            //height: 700px;
+            height: 700px;
             width: 100%;
             img{
                 object-fit: cover;
                 opacity: 0;
                 transition: $transition05;
                 transform: scale(1.1, 1.1);
+                width: auto;
+                height: 100%;
             }
         }
         &__item{
@@ -1128,43 +1130,43 @@ body{
             }
         }
         &__preview{
-            width: 470px;
-            height: 405px;
+            width: 440px;
+            height: 380px;
             position: absolute;
             right: 0px;
             top: 50%;
-            margin-top: -202px;
+            margin-top: -190px;
             overflow: hidden;
             cursor: pointer;
             transition: $transition05;
             z-index: 1500;
             will-change: left, top;
             img{
-                width: 490px !important;
-                height: 422px !important;
+                width: 470px !important;
+                height: 406px !important;
                 max-width: none !important;
                 transition: $transition05;
                 position: absolute;
-                top: -10px;
+                top: -13px;
                 left: -12px;
                 opacity: 0;
                 will-change: left, top;
             }
             
             &:hover{
-                width: 490px !important;
-                height: 422px !important;
-                margin-top: -211px;
-                right: -10px;
+                width: 470px !important;
+                height: 406px !important;
+                margin-top: -206px;
+                right: -15px;
                 
                 img{
-                    top: -1px !important;
-                    left: -2px !important;
-                    width: 490px !important;
-                    height: 422px !important;
+                    top: 3px !important;
+                    left: 3px !important;
+                    width: 470px !important;
+                    height: 406px !important;
                 }
                 #circ{
-                    margin: -34px 0 0 -35px;
+                    margin: -32px 0 0 -35px;
                     will-change: left, top;
                 }
             }
