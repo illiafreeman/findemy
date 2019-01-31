@@ -1128,23 +1128,20 @@ body{
             }
         }
         &__preview{
-            width: 300px;
-            height: 250px;
+            width: 470px;
+            height: 405px;
             position: absolute;
             right: 0px;
             top: 50%;
-            margin-top: -125px;
+            margin-top: -202px;
             overflow: hidden;
             cursor: pointer;
             transition: $transition05;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: 340px 270px;
             z-index: 1500;
             will-change: left, top;
             img{
-                width: 323px !important;
-                height: 270px !important;
+                width: 490px !important;
+                height: 422px !important;
                 max-width: none !important;
                 transition: $transition05;
                 position: absolute;
@@ -1155,19 +1152,19 @@ body{
             }
             
             &:hover{
-                width: 323px !important;
-                height: 270px !important;
-                margin-top: -135px;
-                right: -8px;
+                width: 490px !important;
+                height: 422px !important;
+                margin-top: -211px;
+                right: -10px;
                 
                 img{
-                    top: 0 !important;
-                    left: 3px !important;
-                    width: 323px !important;
-                    height: 270px !important;
+                    top: -1px !important;
+                    left: -2px !important;
+                    width: 490px !important;
+                    height: 422px !important;
                 }
                 #circ{
-                    margin: -35px 0 0 -32px;
+                    margin: -34px 0 0 -35px;
                     will-change: left, top;
                 }
             }
