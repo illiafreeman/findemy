@@ -1219,10 +1219,9 @@ body{
             display: flex;
             flex-direction: column;
             bottom: 0;
-            justify-content: center;
+            justify-content: flex-end;
             .button{
-                position: absolute;
-                bottom: 120px;
+                margin-bottom: 166px;
             }
         }
         &__title{
@@ -1234,6 +1233,9 @@ body{
             opacity: 0;
             transition: $transition05;
             position: relative;
+            height: 112px;
+            overflow: hidden;
+            width: 600px;
         }
         .owl-nav{
             display: none;
@@ -1253,8 +1255,7 @@ body{
             }
         }
         &__counter{
-            position: absolute;
-            bottom: 45px;
+            margin-bottom: 60px;
             font-size: 24px;
             font-family: $font-bold;
             span{
