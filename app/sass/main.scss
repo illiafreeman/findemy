@@ -1306,6 +1306,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: $transition;
+    justify-content: center;
     &:hover{
         background: transparent;
     }
