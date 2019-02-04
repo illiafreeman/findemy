@@ -361,8 +361,12 @@
         .owl-nav{
             display: flex;
             justify-content: center;
-            transform: none;
-            position: static;
+            //transform: none;
+            position: absolute;
+            top: calc(100% - 38px);
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
             .owl-prev, .owl-next{
                 display: block;
                 width: 50px;
@@ -383,7 +387,7 @@
         }
     }
     .owl-carousel .owl-stage-outer{
-        overflow: visible;
+        padding-bottom: 40px;
     }
     .home-slider__counter{
         position: absolute;
