@@ -342,7 +342,7 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
-    //autoplay: true
+    autoplay: true
 });
 
 $('#circ, .home-slider__preview').click(function() {
@@ -358,7 +358,7 @@ $('.home-slider').on('changed.owl.carousel', function(e) {
     var src = $(e.target).find(".owl-item").eq(current).find(".home-slider__preview").append('<div id="circ"></div>');
 
     owl.trigger('stop.owl.autoplay');
-    //owl.trigger('play.owl.autoplay');
+    owl.trigger('play.owl.autoplay');
 
     var bar = new ProgressBar.Circle(circ, {
         color: '#aaa',
