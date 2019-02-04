@@ -840,7 +840,16 @@
             top: 10px !important;
         }
     }
-    
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        .root-category__name_left::after {
+            bottom: 11px !important;
+        }
+        .root-category__name_right:after{
+            top: 13px !important;
+        }
+
+    }
+
 }
 
 @media only screen and (max-width: 460px){
@@ -874,6 +883,12 @@
         top: -3px;
     }
 }
-
-
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .button span {
+        margin-top: 0px;
+    }
+    .home-collection__all:after, .home-blog__all:after, .home-trand__all:after{
+        top: -2px;
+    }
+}
 
