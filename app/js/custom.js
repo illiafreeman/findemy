@@ -340,8 +340,8 @@ owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
     dots: false,
     autoplayTimeout: 5000,
     mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    //touchDrag: false,
+    //pullDrag: false,
     autoplay: true
 });
 

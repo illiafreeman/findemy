@@ -1307,6 +1307,10 @@ body{
     letter-spacing: 2px;
     transition: $transition;
     justify-content: center;
+    align-items: center;
+    span{
+        display: block;
+    }
     &:hover{
         background: transparent;
     }
@@ -1327,17 +1331,17 @@ body{
             line-height: 1;
             letter-spacing: 2px;
             padding-right: 40px;
-            
+            display: block;
             &:after{
                 @extend %after;
                 width: 26px;
-                height: 26px;
+                height: 20px;
                 background-position: center center;
                 background-repeat: no-repeat;
                 transition: $transition;
                 background-image: url(../img/arrow_link.svg);
                 right: 0;
-                top: -4px;
+                top: -1px;
             }
             &:hover{
                 &:after{
@@ -1377,13 +1381,13 @@ body{
             &:after{
                 @extend %after;
                 width: 26px;
-                height: 26px;
+                height: 20px;
                 background-position: center center;
                 background-repeat: no-repeat;
                 transition: $transition;
                 background-image: url(../img/arrow_link.svg);
                 right: 0;
-                top: -4px;
+                top: -1px;
             }
             &:hover{
                 &:after{
@@ -1545,13 +1549,13 @@ body{
         &:after{
             @extend %after;
             width: 26px;
-            height: 26px;
+            height: 20px;
             background-position: center center;
             background-repeat: no-repeat;
             transition: $transition;
             background-image: url(../img/arrow_link.svg);
             right: 0;
-            top: -4px;
+            top: -1px;
         }
         &:hover{
             &:after{
