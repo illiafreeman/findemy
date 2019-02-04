@@ -574,7 +574,7 @@ body{
             &:after{
                 background-image: url(../img/icon_back.svg);
                 left: 0;
-                bottom: -5px;
+                bottom: -3px;
             }
         }
         &_right{
@@ -584,13 +584,13 @@ body{
             &:after{
                 background-image: url(../img/arrow_link.svg);
                 right: 0;
-                top: -4px;
+                top: -1px;
             }
         }
         &:after{
             @extend %after;
             width: 26px;
-            height: 26px;
+            height: 20px;
             background-position: center center;
             background-repeat: no-repeat;
             transition: $transition;
