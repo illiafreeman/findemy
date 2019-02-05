@@ -479,7 +479,8 @@ body{
     overflow: auto;
     will-change: right;
     z-index: 1000;
-    transition: all 0.5s ease-in-out;;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
     opacity: 0;
     &_act{
         opacity: 1;
@@ -1230,7 +1231,8 @@ body{
             margin-bottom: 50px;
             top: -80px;
             opacity: 0;
-            transition: $transition05;
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
             position: relative;
             height: 112px;
             overflow: hidden;
@@ -1310,6 +1312,7 @@ body{
     align-items: center;
     span{
         display: block;
+        line-height: 16px;
     }
     &:hover{
         background: transparent;
