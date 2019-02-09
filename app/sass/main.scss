@@ -1785,55 +1785,109 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    background: #fff;
+    background: #E5E5E5;
     opacity: .9;
     z-index: 900;
+    display: none;
 }
 
 .favourite{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     bottom: 0;
     width: 470px;
     background: #fff;
-    border: 1px solid #000;
     z-index: 1000;
     &__header{
-
+        height: 100px;
+        @extend %flex;
+        justify-content: flex-start;
+        padding: 0 63px;
+        border-bottom: 1px solid #e5e5e5;
     }
     &__title-pic{
-
+        background-image: url(../img/icon_favorite_normal.svg);
+        width: 25px;
+        height: 25px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+        position: relative;
+        margin-right: 15px;
+        span{
+            width: 16px;
+            height: 16px;
+            background-color: #E5E5E5;
+            position: absolute;
+            top: -2px;
+            right: -8px;
+            border-radius: 50%;
+            font-size: 8px;
+            transition: all 0.2s ease-in-out;
+            @extend %flex;
+            justify-content: center;
+        }
     }
     &__title{
-
+        font-family: $font-bold;
     }
     &__close{
-
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 36px;
+        right: 60px;
+        background: url(../img/icon_close_mobile.svg) center center no-repeat;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 1000;
     }
     &__inner{
-
+        padding: 40px 63px;
     }
     &__scroll{
 
     }
     &-item{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 40px;
         &__pic{
+            width: 80px;
+            flex: 0 0 80px;
+            margin-right: 25px;
             img{
 
             }
         }
         &__desc{
-
+            display: block;
+            font-size: 13px;
+            width: calc(100% - 105px);
         }
         &__name{
-
+            display: block;
+            line-height: 21px;
         }
         &__brand{
-
+            display: block;
+            padding-right: 30px;
+            position: relative;
+            font-family: $font-bold;
+            color: #969696;
+            width: 100%;
         }
         &__del{
-
+            position: absolute;
+            top: 4px;
+            right: 0;
+            background: url(../img/icon_trash.svg) center center no-repeat;
+            display: block;
+            width: 15px;
+            height: 15px;
         }
     }
 
