@@ -324,6 +324,17 @@ $('.cart-slider').owlCarousel({
 
 
 
+/*cart show more*/
+$('.cart-info__desc-more').click(function () {
+    $('.cart-info__desc-text').toggleClass('cart-info__desc-text_open');
+
+    if($('.cart-info__desc-text').hasClass('cart-info__desc-text_open')){
+        $(this).html('Свернуть');
+    }else{
+        $(this).html('Развернуть');
+    }
+});
+/*end cart show more*/
 
 
 
