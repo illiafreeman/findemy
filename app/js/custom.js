@@ -309,81 +309,17 @@ $('.range').click(function(e){
 
 
 
-/*home slider*/
-var bar = new ProgressBar.Circle(circ, {
-    color: '#e5e5e5',
-    strokeWidth: 2,
-    trailWidth: 0,
-    easing: 'linear',
-    duration: 5000,
-    from: { color: '#e5e5e5', width: 2 },
-    to: { color: '#e5e5e5', width: 2 },
-    step: function(state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-    }
-});
-owl = $('.home-slider').on('initialized.owl.carousel', function(e) {
-
-    bar.animate(1.0);
-
-    var carousel = e.relatedTarget;
-    $('.home-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
-}).owlCarousel({
-    center: true,
+/*cart slider*/
+$('.cart-slider').owlCarousel({
     items: 1,
     loop: true,
     margin: 0,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     nav: true,
-    dots: false,
-    autoplayTimeout: 5000,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    autoplay: true
+    dots: false
 });
-
-$('#circ, .home-slider__preview').click(function() {
-    owl.trigger('next.owl.carousel');
-});
-
-$('.home-slider').on('changed.owl.carousel', function(e) {
-    $('.home-slider__preview #circ').empty();
-    $('.home-slider__preview #circ').detach();
-    $('.home-slider__item').removeClass('home-slider__item_init');
-
-    var current = e.item.index;
-    var src = $(e.target).find(".owl-item").eq(current).find(".home-slider__preview").append('<div id="circ"></div>');
-
-    owl.trigger('stop.owl.autoplay');
-    owl.trigger('play.owl.autoplay');
-
-    var bar = new ProgressBar.Circle(circ, {
-        color: '#aaa',
-        strokeWidth: 2,
-        trailWidth: 0,
-        easing: 'linear',
-        duration: 5000,
-        from: { color: '#e5e5e5', width: 2 },
-        to: { color: '#e5e5e5', width: 2 },
-        step: function(state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('stroke-width', state.width);
-        }
-    });
-
-    bar.animate(1.0);
-
-    var carousel = e.relatedTarget;
-    $('.home-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
-});
-/*end home slider*/
-
-
-
-
+/*end cart slider*/
 
 
 

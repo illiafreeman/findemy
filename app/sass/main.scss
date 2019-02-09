@@ -1584,10 +1584,14 @@ body{
 
 .cart{
     &-container{
-    
+        @extend %flex;
     }
     &-slider{
+        width: 678px !important;
+        height: 610px !important;
         &__item{
+            width: 678px !important;
+            height: 610px !important;
             .product__like{
             
             }
