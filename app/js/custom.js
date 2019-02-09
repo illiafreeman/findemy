@@ -174,7 +174,7 @@ $(document).ready(function() {
 
 
 
-    /*slim scroll*/
+    /*slim scroll filter*/
     $('.filter__list').slimScroll({
         height: '',
         color: '#969696',
@@ -187,7 +187,7 @@ $(document).ready(function() {
     });
 
     $(".filter_sort .filter__list").slimScroll({destroy: true});
-    /*end slim scroll*/
+    /*end slim scroll filter*/
 
 });
 
@@ -320,6 +320,7 @@ owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     nav: true,
+    dots: false,
     dots: false,
     mouseDrag: false
 });

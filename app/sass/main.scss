@@ -1779,7 +1779,65 @@ body{
     letter-spacing: 2px;
 }
 
+.over{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: .9;
+    z-index: 900;
+}
 
+.favourite{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 470px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 1000;
+    &__header{
+
+    }
+    &__title-pic{
+
+    }
+    &__title{
+
+    }
+    &__close{
+
+    }
+    &__inner{
+
+    }
+    &__scroll{
+
+    }
+    &-item{
+        &__pic{
+            img{
+
+            }
+        }
+        &__desc{
+
+        }
+        &__name{
+
+        }
+        &__brand{
+
+        }
+        &__del{
+
+        }
+    }
+
+}
 
 
 
