@@ -317,7 +317,8 @@ $('.cart-slider').owlCarousel({
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     nav: true,
-    dots: false
+    dots: false,
+    mouseDrag: false
 });
 /*end cart slider*/
 

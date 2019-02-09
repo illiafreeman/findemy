@@ -1592,6 +1592,7 @@ body{
         width: 678px !important;
         height: 610px !important;
         margin: 0 64px 0 -14px;
+        position: relative;
 
         &__item{
             width: 678px !important;
@@ -1608,6 +1609,17 @@ body{
             img{
                 width: auto !important;
                 height: 100%;
+                opacity: 0;
+                transform: translateX(15px);
+                transition: $transition05;
+            }
+        }
+        .active{
+            .cart-slider__pic{
+                img {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
             }
         }
         &__preview{
@@ -1619,6 +1631,39 @@ body{
             box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.2);
             img{
                 object-fit: cover;
+                opacity: 0;
+                transform: translateX(-15px);
+                transition: $transition05;
+            }
+        }
+        .active{
+            .cart-slider__preview{
+                img {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+        .owl-nav{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 100;
+            button{
+                width: 76px;
+                height: 92px;
+                background-color: #fff !important;
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                span{
+                    display: none;
+                }
+            }
+            .owl-prev{
+                background-image: url(../img/arrow_slider_prev.svg) !important;
+            }
+            .owl-next{
+                background-image: url(../img/arrow_slider.svg) !important;
             }
         }
     }
