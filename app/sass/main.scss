@@ -1590,13 +1590,22 @@ body{
         margin-bottom: 115px;
     }
     &-slider{
-        width: 678px !important;
+        width: 690px !important;
         height: 610px !important;
         margin: 0 64px 0 -14px;
         position: relative;
-
+        &__counter{
+            position: absolute;
+            top: 315px;
+            left: 13px;
+            font-size: 24px;
+            font-family: $font-bold;
+            span{
+                font-size: 16px;
+            }
+        }
         &__item{
-            width: 678px !important;
+            width: 690px !important;
             height: 610px !important;
             display: flex;
             justify-content: flex-end;
@@ -1632,10 +1641,13 @@ body{
             left: 14px;
             box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.2);
             img{
-                object-fit: cover;
+                object-fit: cover !important;
                 opacity: 0;
                 transform: translateX(-15px);
                 transition: $transition05;
+                max-width: none;
+                width: 100% !important;
+                height: 100% !important;
             }
         }
         .active{
@@ -1658,6 +1670,7 @@ body{
                 background-color: #fff !important;
                 background-position: center center !important;
                 background-repeat: no-repeat !important;
+                transition: $transition;
                 span{
                     display: none;
                 }
