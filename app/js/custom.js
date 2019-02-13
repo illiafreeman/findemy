@@ -310,30 +310,6 @@ $('.range').click(function(e){
 
 
 /*cart slider*/
-/*owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
-    var carousel = e.relatedTarget;
-    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
-}).owlCarousel({
-    items: 1,
-    loop: true,
-    margin: 0,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav: true,
-    dots: false,
-    mouseDrag: false
-});
-
-$('.cart-slider').on('changed.owl.carousel', function(e) {
-    var carousel = e.relatedTarget;
-    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
-});*/
-
-
-
-
-
-
 var $count = $('.cart-slider__counter');
 var $slickElement = $('.cart-slider');
 
@@ -343,34 +319,18 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
     $count.html(i + '<span>&nbsp;/&nbsp;0' + slick.slideCount + '</span>');
 });
 
+$slickElement.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $('.slick-current .cart-slider__pic img').css('transform', 'scale(1.2)');
+    $('.slick-slide .cart-slider__pic img').not($('.slick-current .cart-slider__pic img')).css('transform', 'scale(1)');
+});
+
 $slickElement.slick({
-    autoplay: true,
+    autoplay: false,
     fade: true,
+    speed: 1000,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>'
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*end cart slider*/
 
 

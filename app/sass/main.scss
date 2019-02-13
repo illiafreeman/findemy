@@ -1597,7 +1597,7 @@ body{
     &-slider{
         width: 690px !important;
         height: 610px !important;
-        margin: 0 64px 0 -14px;
+        margin: 0 64px 0 -33px;
         position: relative;
         &__counter{
             position: absolute;
@@ -1617,7 +1617,7 @@ body{
         &__item{
             width: 690px !important;
             height: 610px !important;
-            display: flex;
+            display: flex !important;
             justify-content: flex-end;
             position: relative;
             .product__like{
@@ -1628,11 +1628,13 @@ body{
         }
         &__pic{
             height: 100%;
+            width: 560px;
+            overflow: hidden;
             img{
                 width: auto !important;
                 height: 100%;
                 opacity: 0;
-                transform: translateX(15px);
+                //transform: scale(1.2);
                 transition: $transition05;
             }
         }
@@ -1640,7 +1642,7 @@ body{
             .cart-slider__pic{
                 img {
                     opacity: 1;
-                    transform: translateX(0);
+                    //transform: scale(1) !important;
                 }
             }
         }
@@ -1649,23 +1651,23 @@ body{
             width: 206px;
             height: 224px;
             top: 60px;
-            left: 14px;
-            box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.1);
+            left: 33px;
+            box-shadow: 12px 13px 45px 6px rgba(0,0,0,0.1);
             img{
-                object-fit: cover !important;
+                //object-fit: cover !important;
                 opacity: 0;
-                transform: translateX(-15px);
+                transform: scale(1.1);
                 transition: $transition05;
                 max-width: none;
                 width: 100% !important;
-                height: 100% !important;
+                //height: 100% !important;
             }
         }
         .slick-active{
             .cart-slider__preview{
                 img {
+                    transform: scale(1);
                     opacity: 1;
-                    transform: translateX(0);
                 }
             }
         }
