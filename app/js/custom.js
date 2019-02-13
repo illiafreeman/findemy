@@ -310,7 +310,7 @@ $('.range').click(function(e){
 
 
 /*cart slider*/
-owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
+/*owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
     var carousel = e.relatedTarget;
     $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
 }).owlCarousel({
@@ -327,7 +327,48 @@ owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
 $('.cart-slider').on('changed.owl.carousel', function(e) {
     var carousel = e.relatedTarget;
     $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
-})
+});*/
+
+
+
+
+
+
+var $count = $('.cart-slider__counter');
+var $slickElement = $('.cart-slider');
+
+$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $count.html(i + '<span>&nbsp;/&nbsp;0' + slick.slideCount + '</span>');
+});
+
+$slickElement.slick({
+    autoplay: true,
+    fade: true
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*end cart slider*/
 
 

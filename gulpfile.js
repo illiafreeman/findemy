@@ -42,7 +42,8 @@ gulp.task('scripts', function(){
         'plugins/owl.carousel.min.js',
         'plugins/jquery.slimscroll.js',
         'plugins/ion.rangeSlider.min.js',
-        'plugins/progressbar.js'
+        'plugins/progressbar.js',
+        'plugins/slick.min.js'
 
 
 

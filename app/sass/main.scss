@@ -2,6 +2,7 @@
 @import 'plugins/animate';
 @import 'plugins/owl.carousel.min';
 @import 'plugins/ion.rangeSlider.min';
+@import 'plugins/slick';
 @import '_var';
 @import '_help';
 
@@ -1635,7 +1636,7 @@ body{
                 transition: $transition05;
             }
         }
-        .active{
+        .slick-active{
             .cart-slider__pic{
                 img {
                     opacity: 1;
@@ -1660,7 +1661,7 @@ body{
                 height: 100% !important;
             }
         }
-        .active{
+        .slick-active{
             .cart-slider__preview{
                 img {
                     opacity: 1;
