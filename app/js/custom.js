@@ -312,7 +312,7 @@ $('.range').click(function(e){
 /*cart slider*/
 owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
     var carousel = e.relatedTarget;
-    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
+    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
 }).owlCarousel({
     items: 1,
     loop: true,
@@ -321,13 +321,12 @@ owl_cart = $('.cart-slider').on('initialized.owl.carousel', function(e) {
     animateIn: 'fadeIn',
     nav: true,
     dots: false,
-    dots: false,
     mouseDrag: false
 });
 
 $('.cart-slider').on('changed.owl.carousel', function(e) {
     var carousel = e.relatedTarget;
-    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;' + carousel.items().length + '</span>');
+    $('.cart-slider__counter').html(carousel.relative(carousel.current()) + 1 + '<span>&nbsp;/&nbsp;0' + carousel.items().length + '</span>');
 })
 /*end cart slider*/
 
