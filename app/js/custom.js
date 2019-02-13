@@ -327,7 +327,7 @@ $slickElement.on('beforeChange', function (event, slick, currentSlide, nextSlide
 $slickElement.slick({
     autoplay: false,
     fade: true,
-    speed: 1000,
+    speed: 500,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>'
 });
@@ -349,7 +349,18 @@ $('.cart-info__desc-more').click(function () {
 
 
 
-
+/*favourite*/
+$('.header-nav__item_button-like').click(function () {
+    $('.over').addClass('over_act');
+    $('.favourite').addClass('favourite_act');
+    $('body').addClass('oh');
+});
+$('.favourite__close').click(function () {
+    $('.over').removeClass('over_act');
+    $('.favourite').removeClass('favourite_act');
+    $('body').removeClass('oh');
+});
+/*end favourite*/
 
 
 
