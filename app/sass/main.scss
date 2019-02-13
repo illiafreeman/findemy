@@ -1669,29 +1669,29 @@ body{
                 }
             }
         }
-        .owl-nav{
+        
+        .slick-arrow{
             position: absolute;
             bottom: 0;
-            right: 0;
             z-index: 100;
             height: 92px;
-            button{
-                width: 76px;
-                height: 92px;
-                background-color: #fff !important;
-                background-position: center center !important;
-                background-repeat: no-repeat !important;
-                transition: $transition;
-                span{
-                    display: none;
-                }
-            }
-            .owl-prev{
-                background-image: url(../img/arrow_slider_prev.svg) !important;
-            }
-            .owl-next{
-                background-image: url(../img/arrow_slider.svg) !important;
-            }
+            width: 76px;
+            background-color: #fff !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            transition: $transition;
+            padding: 0;
+            border: 0;
+            display: block !important;
+            cursor: pointer;
+        }
+        .slick-prev{
+            background-image: url(../img/arrow_slider_prev.svg) !important;
+            right: 76px;
+        }
+        .slick-next{
+            background-image: url(../img/arrow_slider.svg) !important;
+            right: 0;
         }
     }
     &-info{

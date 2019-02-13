@@ -345,7 +345,9 @@ $slickElement.on('init reInit afterChange', function (event, slick, currentSlide
 
 $slickElement.slick({
     autoplay: true,
-    fade: true
+    fade: true,
+    prevArrow: '<div class="slick-prev slick-arrow"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"></div>'
 });
 
 
