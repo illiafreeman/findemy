@@ -480,8 +480,7 @@ body{
     overflow: auto;
     will-change: right;
     z-index: 1000;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: $transition05;
     opacity: 0;
     &_act{
         opacity: 1;
@@ -1817,7 +1816,7 @@ body{
 .favourite{
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -470px;
     bottom: 0;
     width: 470px;
     background: #fff;
@@ -1872,16 +1871,24 @@ body{
         z-index: 1000;
     }
     &__inner{
-        padding: 40px 63px;
+        padding: 40px 45px 40px 63px;
+        height: calc(100% - 100px);
     }
     &__scroll{
-
+        max-height: 400px;
+        padding-right: 20px;
     }
     &-item{
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         margin-bottom: 40px;
+        transition: $transition05;
+        position: relative;
+        &_removed{
+            opacity: 0;
+            //left: 100%;
+        }
         &__pic{
             width: 80px;
             flex: 0 0 80px;

@@ -354,11 +354,28 @@ $('.header-nav__item_button-like').click(function () {
     $('.over').addClass('over_act');
     $('.favourite').addClass('favourite_act');
     $('body').addClass('oh');
+    var h = $('.favourite__inner').outerHeight();
+    $('.favourite__scroll').css('min-height', h - 80);
 });
 $('.favourite__close').click(function () {
     $('.over').removeClass('over_act');
     $('.favourite').removeClass('favourite_act');
     $('body').removeClass('oh');
+});
+$('.favourite-item__del').click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).parents('.favourite-item').addClass('favourite-item_removed').delay(300).fadeOut(1);
+});
+$('.favourite__scroll').slimScroll({
+    height: '',
+    color: '#969696',
+    size: '3px',
+    alwaysVisible: true,
+    borderRadius: '2px',
+    railBorderRadius: '0',
+    distance: '0px',
+    wheelStep: '20px'
 });
 /*end favourite*/
 
