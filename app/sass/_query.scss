@@ -21,6 +21,7 @@
                 transition: $transition05;
                 z-index: 1500;
                 will-change: left, top;
+                right: 250px;
                 img{
                     width: 470px !important;
                     height: 406px !important;
@@ -37,7 +38,7 @@
                     width: 470px !important;
                     height: 406px !important;
                     margin-top: -203px;
-                    right: 377px;
+                    right: 227px;
                     
                     img{
                         top: -0px !important;
@@ -630,18 +631,6 @@
         font-size: 24px;
         line-height: 32px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
     .footer{
         padding: 25px 0;
     }
