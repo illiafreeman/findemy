@@ -324,12 +324,18 @@ $slickElement.on('beforeChange', function (event, slick, currentSlide, nextSlide
     $('.slick-slide .cart-slider__pic img').not($('.slick-current .cart-slider__pic img')).css('transform', 'scale(1)');
 });
 
+$(window).on('resize orientationchange', function() {
+    $slickElement.slick('slickNext');
+    //$slickElement.slick('slickPrev');
+});
+
 $slickElement.slick({
     autoplay: false,
     fade: true,
     speed: 500,
     slidesToShow: 1,
     mobileFirst: true,
+    responsive: true,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>'
 });
