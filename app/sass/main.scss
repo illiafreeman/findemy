@@ -670,6 +670,63 @@ body{
         flex-wrap: wrap;
         margin: 0 -15px;
     }
+    &-banner{
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/catalog_banner.jpg);
+        position: relative;
+        .container{
+            position: relative;
+        }
+        &__subtitle{
+            left: 120px;
+            top: 323px;
+            color: $color-gray;
+            font-size: 24px;
+            line-height: 32px;
+            font-family: $font;
+            width: 445px;
+            position: absolute;
+        }
+        &__title{
+            top: 162px;
+            position: absolute;
+            width: 745px;
+            font-size: 48px;
+            font-family: $font;
+            line-height: 56px;
+        }
+        &__back{
+            font-size: 16px;
+            font-family: $font-bold;
+            text-transform: uppercase;
+            height: 20px;
+            line-height: 1;
+            letter-spacing: 2px;
+            padding-left: 40px;
+            display: block;
+            position: absolute;
+            top: 62px;
+            &:after {
+                @extend %after;
+                width: 26px;
+                height: 20px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                transition: $transition;
+                background-image: url(../img/icon_back.svg);
+                left: 0;
+                top: -1px;
+            }
+            &:hover{
+                position: absolute;
+                &:after{
+                    left: -8px;
+                }
+            }
+        }
+    }
 }
 
 .product{
