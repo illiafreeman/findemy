@@ -1595,7 +1595,7 @@ body{
     }
     &-slider{
         width: 690px !important;
-        height: 610px !important;
+        //height: 610px !important;
         margin: 0 64px 0 -45px;
         position: relative;
         &__counter{
@@ -1614,8 +1614,8 @@ body{
             }
         }
         &__item{
-            width: 690px !important;
-            height: 610px !important;
+            //width: 690px !important;
+            //height: 610px !important;
             display: flex !important;
             justify-content: flex-end;
             position: relative;
@@ -1626,13 +1626,15 @@ body{
 
         }
         &__pic{
-            height: 100%;
             width: 560px;
+            height: 608px;
             overflow: hidden;
             img{
-                width: auto !important;
+                width: 100%;
                 height: 100%;
+                //height: auto;
                 opacity: 0;
+                object-fit: cover;
                 //transform: scale(1.2);
                 transition: $transition05;
             }
@@ -1652,6 +1654,7 @@ body{
             top: 60px;
             left: 45px;
             box-shadow: 12px 13px 45px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
             img{
                 //object-fit: cover !important;
                 opacity: 0;

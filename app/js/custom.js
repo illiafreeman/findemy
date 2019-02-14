@@ -328,6 +328,8 @@ $slickElement.slick({
     autoplay: false,
     fade: true,
     speed: 500,
+    slidesToShow: 1,
+    mobileFirst: true,
     prevArrow: '<div class="slick-prev slick-arrow"></div>',
     nextArrow: '<div class="slick-next slick-arrow"></div>'
 });
@@ -355,7 +357,7 @@ $('.header-nav__item_button-like').click(function () {
     $('.favourite').addClass('favourite_act');
     $('body').addClass('oh');
     var h = $('.favourite__inner').outerHeight();
-    $('.favourite__scroll').css('min-height', h - 80);
+    $('.favourite__scroll').css('max-height', h - 80);
 });
 $('.favourite__close').click(function () {
     $('.over').removeClass('over_act');
