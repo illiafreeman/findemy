@@ -389,7 +389,23 @@ $('.favourite__scroll').slimScroll({
 
 
 
+/*banner text link*/
 
+function banner_text() {
+    if ($(window).width() < 800) {
+        $('.catalog-banner__back').html('к подборкам');
+    }else{
+        $('.catalog-banner__back').html('назад к подборкам');
+    }
+}
+$(window).resize(function() {
+    banner_text();
+});
+$(document).ready(function() {
+    banner_text();
+});
+
+/*end banner text link*/
 
 
 
