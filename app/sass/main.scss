@@ -737,6 +737,19 @@ body{
     width: calc(25% - 30px);
     margin: 15px;
     position: relative;
+    &_sel{
+        width: calc(33.333% - 30px);
+        .product__pic:after {
+            padding-bottom: 64%;
+        }
+        .product__desc{
+            font-size: 24px;
+            line-height: 32px;
+            height: 45px;
+            overflow: hidden;
+            font-family: $font;
+        }
+    }
     &__pic-wrap{
         //padding-top: 108%;
         overflow: hidden;
@@ -2031,23 +2044,30 @@ body{
 
 }
 
-.selection-banner{
-    height: 500px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-image: url(../img/selection_banner.jpg);
-    position: relative;
-    margin-bottom: 40px;
-    &__title{
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        width: 590px;
-        font-size: 48px;
-        font-family: $font;
-        margin: 0;
-        line-height: 56px;
+.selection{
+    &-banner{
+        height: 500px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url(../img/selection_banner.jpg);
+        position: relative;
+        margin-bottom: 80px;
+        &__title{
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 590px;
+            font-size: 48px;
+            font-family: $font;
+            margin: 0;
+            line-height: 56px;
+        }
+    }
+    &-container{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
     }
 }
 
