@@ -232,14 +232,18 @@
 }
 
 @media only screen and (max-width: 1040px) {
+    
     .catalog-banner__subtitle{
         display: none;
     }
-    .catalog-banner__title{
+    .catalog-banner__title, .selection-banner__title{
         width: 540px;
     }
-    .catalog-banner{
+    .catalog-banner, .selection-banner{
         height: 420px;
+    }
+    .selection-banner{
+        margin-bottom: 60px;
     }
     .cart-slider__preview{
         width: 206px;
@@ -307,6 +311,9 @@
     }
     .cart-container{
         margin-top: 40px;
+    }
+    .product_sel{
+        width: calc(50% - 30px);
     }
 }
 
@@ -471,7 +478,7 @@
 }
 
 @media only screen and (max-width: 800px){
-    .catalog-banner__title{
+    .catalog-banner__title, .selection-banner__title{
         font-size: 30px;
         line-height: 40px;
         width: 430px;
@@ -479,6 +486,10 @@
     .catalog-banner{
         margin-bottom: 15px;
         background-position: 58% center;
+    }
+    .selection-banner{
+        margin-bottom: 45px;
+        height: 320px;
     }
     .collection{
         flex-direction: column;
@@ -588,6 +599,16 @@
     .home-collection__all{
         margin-right: 25px;
     }
+    .product_sel{
+        .product__desc{
+            font-size: 20px;
+            line-height: 26px;
+        }
+        .product__subdesc{
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -595,6 +616,9 @@
 }
 
 @media only screen and (max-width: 700px){
+    .selection-banner{
+        background-position: 58% center;
+    }
     .catalog-banner {
         height: 300px;
     }
@@ -908,6 +932,10 @@
         width: 300px;
         top: 140px;
     }
+    .selection-banner{
+        background-position: 65% center;
+        height: 280px;
+    }
 }
 
 @media only screen and (max-width: 580px){
@@ -915,6 +943,23 @@
 }
 
 @media only screen and (max-width: 480px){
+    .favourite{
+        width: 100%;
+        right: -100%;
+        &_act {
+            right: 0;
+        }
+    }
+    .selection-banner {
+        margin-bottom: 40px;
+    }
+    .product.product_sel{
+        margin-bottom: 20px;
+    }
+    .selection-banner__title{
+        width: auto;
+        padding-right: 20px;
+    }
     .home-slider__title {
         width: 300px;
         height: 126px;
@@ -997,7 +1042,15 @@
 }
 
 @media only screen and (max-width: 420px){
-
+    .favourite__header{
+        padding: 0 25px;
+    }
+    .favourite__inner {
+        padding: 25px 24px 25px 30px;
+    }
+    .favourite__close {
+        right: 20px;
+    }
 }
 
 @media only screen and (max-width: 380px){

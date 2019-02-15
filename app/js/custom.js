@@ -363,7 +363,12 @@ $('.header-nav__item_button-like').click(function () {
     $('.favourite').addClass('favourite_act');
     $('body').addClass('oh');
     var h = $('.favourite__inner').outerHeight();
-    $('.favourite__scroll').css('max-height', h - 80);
+    if ($(window).width() < 440) {
+        $('.favourite__scroll').css('max-height', h - 50);
+    }else{
+        $('.favourite__scroll').css('max-height', h - 80);
+    }
+
 });
 $('.favourite__close').click(function () {
     $('.over').removeClass('over_act');
