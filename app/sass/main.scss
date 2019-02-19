@@ -1429,6 +1429,8 @@ body{
     transition: $transition;
     justify-content: center;
     align-items: center;
+    border: 0;
+    cursor: pointer;
     span{
         display: block;
         line-height: 16px;
@@ -2109,6 +2111,81 @@ body{
         margin: -15px;
     }
 }
+
+.blog{
+    &-banner{
+    
+    }
+    &__title{
+    
+    }
+    &-nav{
+        &__link{
+            &_act, &:hover{
+            
+            }
+        }
+    }
+}
+
+.container_aside{
+
+}
+
+.col-center{
+
+}
+
+.col-aside{
+    &__title{
+    
+    }
+}
+
+.blog-page{
+    .blog{
+    
+    }
+    .blog__pic{
+        img{
+        
+        }
+    }
+}
+
+.subscribe{
+    &-title{
+    
+    }
+    &-input{
+    
+    }
+    .button{
+    
+    }
+}
+
+.instagram{
+    &__item{
+        img{
+        
+        }
+    }
+}
+
+.main-article{
+    &__item{
+        &-pic{
+        
+        }
+        &-desc{
+        
+        }
+    }
+}
+
+
+
 
 
 
