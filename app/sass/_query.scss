@@ -603,10 +603,13 @@
         .product__desc{
             font-size: 20px;
             line-height: 26px;
+            height: auto;
+            max-height: 55px;
         }
         .product__subdesc{
             font-size: 15px;
             line-height: 22px;
+            height: 46px;
         }
     }
 }
@@ -1033,6 +1036,21 @@
         }
         .root-category__name_right:after{
             top: 11px !important;
+        }
+    }
+    .product_sel{
+        .product__desc{
+            height: auto;
+            max-height: none;
+        }
+        .product__subdesc{
+            height: auto;
+            max-height: none;
+        }
+        .product__desc, .product__subdesc{
+            &:after{
+                display: none;
+            }
         }
     }
 }
