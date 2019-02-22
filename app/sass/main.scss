@@ -2153,11 +2153,15 @@ body{
         &__wrap{
             @extend %flex-c;
             height: 100px;
+            align-items: baseline;
         }
         &__link{
             display: block;
             margin: 0 30px;
-            color: $color-gray;
+            color: $color-gray !important;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
             &:last-of-type{
                 margin-right: 0;
             }
@@ -2165,11 +2169,11 @@ body{
                 margin-left: 0;
             }
             &_act{
-                color: $font-color;
+                color: $font-color !important;
                 font-family: $font-bold;
             }
             &:hover{
-                color: $font-color;
+                color: $font-color !important;
             }
         }
     }
@@ -2215,6 +2219,7 @@ body{
             width: calc(50% - 30px);
             &__text{
                 position: relative;
+                margin-bottom: 20px;
                 &:after{
                     display: block;
                     content: '';
