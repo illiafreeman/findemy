@@ -395,7 +395,6 @@ $('.favourite__scroll').slimScroll({
 
 
 /*banner text link*/
-
 function banner_text() {
     if ($(window).width() < 800) {
         $('.catalog-banner__back').html('к подборкам');
@@ -409,12 +408,22 @@ $(window).resize(function() {
 $(document).ready(function() {
     banner_text();
 });
-
 /*end banner text link*/
 
 
 
-
+/*blog categories toggle*/
+$('.blog-nav__link').click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.container_aside').addClass('ov');
+    $('.blog-nav__link').removeClass('blog-nav__link_act');
+    $(this).addClass('blog-nav__link_act');
+    setTimeout(function(){
+        $('.container_aside').removeClass('ov');
+    }, 1000);
+});
+/*end blog categories toggle*/
 
 
 

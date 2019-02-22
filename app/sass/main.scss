@@ -1620,7 +1620,7 @@ body{
         text-transform: uppercase;
         letter-spacing: 2px;
         height: 50px;
-        padding-top: 10px;
+        margin: 12px 0 0;
         @extend %flex;
     }
     &__like{
@@ -2178,6 +2178,10 @@ body{
 .container_aside{
     @extend %flex;
     align-items: flex-start;
+    transition: $transition;
+    &.ov{
+        opacity: 0;
+    }
 }
 
 .col-center{
@@ -2204,7 +2208,8 @@ body{
         @extend %flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        margin: -15px;
+        margin: -15px -15px 0;
+        padding-bottom: 10px;
         .blog{
             margin: 15px;
             width: calc(50% - 30px);
