@@ -2114,16 +2114,22 @@ body{
 
 .blog{
     &-banner{
-        height: 500px;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-image: url(../img/blog_banner.jpg);
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        height: 500px;
+        &__bg{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-width: none;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+        }
         &__title{
             margin-left: 50%;
             font-size: 48px;
@@ -2279,6 +2285,7 @@ body{
         margin: 2px;
         width: calc(33.333% - 4px);
         position: relative;
+        transition: $transition;
         &:before{
             display: block;
             content: '';
@@ -2291,6 +2298,9 @@ body{
             position: absolute;
             top: 0;
             left: 0;
+        }
+        &:hover{
+            opacity: .85;
         }
     }
 }
