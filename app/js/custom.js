@@ -413,21 +413,44 @@ $(document).ready(function() {
 
 
 /*blog categories toggle*/
-$('.blog-nav__link').click(function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $('.container_aside').addClass('ov');
-    $('.blog-nav__link').removeClass('blog-nav__link_act');
-    $(this).addClass('blog-nav__link_act');
-    setTimeout(function(){
-        $('.container_aside').removeClass('ov');
-    }, 1000);
-});
+if ($(window).width() > 600) {
+    $('.blog-nav__link').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.container_aside').addClass('ov');
+        $('.blog-nav__link').removeClass('blog-nav__link_act');
+        $(this).addClass('blog-nav__link_act');
+        setTimeout(function () {
+            $('.container_aside').removeClass('ov');
+        }, 1000);
+    });
+}
 /*end blog categories toggle*/
 
 
 
-
+/*blog categories dropdown*/
+$(document).ready(function() {
+    $('.blog-nav__header').click(function (e) {
+        $(this).parents('.blog-nav__wrap').toggleClass('blog-nav__wrap_act');
+    });
+    $('body').click(function () {
+        $('.blog-nav__wrap').removeClass('blog-nav__wrap_act');
+    });
+    $('.blog-nav__header').click(function (e) {
+        e.stopPropagation();
+    });
+    $('.blog-nav__link').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.blog-nav__link').removeClass('blog-nav__link_act');
+        $(this).addClass('blog-nav__link_act');
+        var t = $(this).html();
+        $('.blog-nav__header').html(t);
+        $('.blog-nav__wrap').removeClass('blog-nav__wrap_act');
+    });
+});
+/*end blog categories dropdown*/
 
 
 
