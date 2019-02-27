@@ -483,6 +483,7 @@ $('.search').click(function () {
     $('#search_autotype').empty();
 });
 $('.search__close').click(function () {
+    $('.search-input').val('');
     $('.search').removeClass('search_act');
     setTimeout(function () {
         $('body').removeClass('oh');
