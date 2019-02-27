@@ -247,9 +247,12 @@
 }
 
 @media only screen and (max-width: 1040px) {
-    .subscribe, .instagram{
-        margin-bottom: 60px;
+    .aside-group{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
+    
     .blog-page{
         .paginate {
             margin: 35px 0 75px;
@@ -283,12 +286,15 @@
             width: calc(50% - 30px);
         }
     }
-    
-    .instagram{
+    .instagram {
+        flex: 0 0 320px;
         width: 320px;
     }
+    .subscribe, .instagram{
+        margin-bottom: 60px;
+    }
     .subscribe{
-        flex: 1 0 auto;
+        flex: 1 1 auto;
         margin-right: 30px;
         display: flex;
         flex-direction: column;
@@ -415,6 +421,7 @@
 }
 
 @media only screen and (max-width: 980px) {
+
     .blog-banner__subtitle{
         display: none;
     }
@@ -586,6 +593,16 @@
     
 }
 
+
+@media only screen and (max-width: 850px){
+.subscribe-title{
+        width: auto;
+    }
+    .subscribe form{
+        width: auto;
+    }
+}
+
 @media only screen and (max-width: 800px){
     .catalog-banner__title, .selection-banner__title{
         font-size: 30px;
@@ -733,6 +750,17 @@
     }
     .blog-banner__bg img {
         left: -350px;
+    }
+    .instagram {
+        flex: 0 0 calc(50% - 15px);
+        width: auto;
+    }
+    .subscribe {
+        padding: 20px 30px 30px;
+    }
+    .subscribe-title {
+        font-size: 24px;
+        line-height: 32px
     }
 }
 
@@ -1070,6 +1098,22 @@
     .selection-banner{
         background-position: 65% center;
         height: 280px;
+    }
+    .aside-group{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .subscribe{
+        margin: 0 0 40px;
+        padding: 30px;
+    }
+    .subscribe-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .instagram {
+        flex: 0 0 auto;
+        width: 100%;
     }
 }
 
