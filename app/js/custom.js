@@ -454,6 +454,15 @@ $(document).ready(function() {
 
 
 /*search autotype*/
+new TypeIt('#search_autotype', {
+    strings: ["вечернее платье", "туфли", "женские сумки", "пуловер мужской"],
+    speed: 150,
+    deleteSpeed: 50,
+    breakLines: false,
+    waitUntilVisible: false,
+    loop: true,
+    nextStringDelay: [2000, 1000]
+}).go();
 $('.header-nav__item_button-search').click(function (e) {
     $('body').addClass('oh');
     $('.search').addClass('search_act');
@@ -470,9 +479,14 @@ $('.header-nav__item_button-search').click(function (e) {
     }, 500);
 
 });
+$('.search').click(function () {
+    $('#search_autotype').empty();
+});
 $('.search__close').click(function () {
     $('.search').removeClass('search_act');
-    $('body').removeClass('oh');
+    setTimeout(function () {
+        $('body').removeClass('oh');
+    }, 500);
 });
 /*end search autotype*/
 

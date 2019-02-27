@@ -2359,6 +2359,59 @@ body{
     &_act{
         right: 0;
     }
+    &__close{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 36px;
+        right: 60px;
+        background: url(../img/icon_close_mobile.svg) center center no-repeat;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        z-index: 1000;
+    }
+    &-field{
+        position: relative;
+    }
+    &-title{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    &-autotype{
+        color: #E5E5E5;
+        font-family: $font-bold;
+        font-size: 80px;
+        text-transform: lowercase;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 1500px;
+        z-index: 100;
+        span.ti-cursor{
+            color: transparent !important;
+            font-family: $font !important;
+            display: inline-block;
+            width: 0;
+            overflow: hidden;
+            border-left: 1px solid #111;
+            font-size: 60px !important;
+            left: -.5ch !important;
+        }
+    }
+    &-input{
+        font-family: $font-bold;
+        font-size: 80px;
+        text-transform: lowercase;
+        position: absolute;
+        top: 46px;
+        left: 0;
+        padding: 0;
+        height: 70px;
+        line-height: 70px;
+        display: block;
+        border: 0;
+        background: transparent;
+    }
 }
 
 
