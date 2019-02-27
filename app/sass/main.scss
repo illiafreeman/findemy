@@ -2349,13 +2349,14 @@ body{
 .search{
     position: fixed;
     top: 0;
-    bottom: 0;
+    //bottom: 0;
     right: -100%;
     width: 100%;
     background: #fff;
     z-index: 1000;
     transition: $transition05;
     @extend %flex-c;
+    flex-direction: column;
     &_act{
         right: 0;
     }
