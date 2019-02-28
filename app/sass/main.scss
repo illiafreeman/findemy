@@ -2349,14 +2349,13 @@ body{
 .search{
     position: fixed;
     top: 0;
-    //bottom: 0;
+    bottom: 0;
     right: -100%;
     width: 100%;
     background: #fff;
     z-index: 1000;
     transition: $transition05;
-    @extend %flex-c;
-    flex-direction: column;
+
     &_act{
         right: 0;
     }
@@ -2372,45 +2371,40 @@ body{
         z-index: 1000;
     }
     &-field{
-        position: relative;
+        position: absolute;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition;
     }
     &-title{
         font-size: 32px;
         line-height: 40px;
     }
-    &-autotype{
-        color: #E5E5E5;
-        font-family: $font-bold;
-        font-size: 80px;
-        text-transform: lowercase;
-        position: absolute;
-        top: 122px;
-        left: 0;
-        width: 1500px;
-        z-index: 100;
-        span.ti-cursor{
-            color: transparent !important;
-            font-family: $font !important;
-            display: inline-block;
-            width: 0;
-            overflow: hidden;
-            border-left: 1px solid #111;
-            font-size: 60px !important;
-            left: -.5ch !important;
-        }
+    &-wrap{
+        width: 100%;
+        max-height: 100%;
     }
-    &-input{
+    &_autotype{
         font-family: $font-bold;
         font-size: 80px;
         text-transform: lowercase;
-        position: absolute;
-        top: 89px;
-        left: 0;
         padding: 0;
-        line-height: 1.1;
+        line-height: 1.5;
         display: block;
         border: 0;
         background: transparent;
+        color: #E5E5E5;
+        &-act{
+            color: $font-color;
+            box-shadow: 0 1px 0 0 #e5e5e5;
+        }
+    }
+    &_res{
+        .search-field{
+            top: 10vh;
+            transform: none;
+        }
     }
 }
 

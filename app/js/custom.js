@@ -454,7 +454,7 @@ $(document).ready(function() {
 
 
 /*search autotype*/
-new TypeIt('#search_autotype', {
+const instance = new TypeIt('.search_autotype', {
     strings: ["вечернее платье", "туфли", "женские сумки", "пуловер мужской"],
     speed: 150,
     deleteSpeed: 50,
@@ -463,6 +463,7 @@ new TypeIt('#search_autotype', {
     loop: true,
     nextStringDelay: [2000, 1000]
 }).go();
+
 $('.header-nav__item_button-search').click(function (e) {
     $('body').addClass('oh');
     $('.search').addClass('search_act');
@@ -477,10 +478,20 @@ $('.header-nav__item_button-search').click(function (e) {
             nextStringDelay: [2000, 1000]
         }).go();
     }, 500);
+});
+$('.search').one('click', function() {
+    instance.freeze();
+    setTimeout(function () {
+        $('.search_autotype').val('').addClass('search_autotype-act');
+    }, 100);
 
 });
-$('.search').click(function () {
-    $('#search_autotype').empty();
+$('.search_autotype').on('keyup', function() {
+    if((this.value.length) > 4){
+        $('.search').addClass('search_res');
+    }else{
+        $('.search').removeClass('search_res');
+    }
 });
 $('.search__close').click(function () {
     $('.search-input').val('');
@@ -488,6 +499,16 @@ $('.search__close').click(function () {
     setTimeout(function () {
         $('body').removeClass('oh');
     }, 500);
+});
+$('.search-wrap').slimScroll({
+    height: '',
+    color: '#969696',
+    size: '3px',
+    alwaysVisible: true,
+    borderRadius: '2px',
+    railBorderRadius: '0',
+    distance: '5px',
+    wheelStep: '50px'
 });
 /*end search autotype*/
 
