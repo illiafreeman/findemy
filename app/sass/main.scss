@@ -2381,9 +2381,20 @@ body{
         font-size: 32px;
         line-height: 40px;
     }
+    &-input{
+        height: 96px;
+        border: 0;
+        font-size: 80px;
+        font-family: $font-bold;
+        position: absolute;
+        bottom: 10px;
+        background: transparent;
+    }
     &-wrap{
         width: 100%;
-        max-height: 400px;
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
     }
     &_autotype{
         font-family: $font-bold;
@@ -2391,13 +2402,20 @@ body{
         text-transform: lowercase;
         padding: 0;
         line-height: 1.5;
+        height: 120px;
         display: block;
         border: 0;
         background: transparent;
         color: #E5E5E5;
         &-act{
-            color: $font-color;
-            box-shadow: 0 1px 0 0 #e5e5e5;
+            opacity: 0;
+        }
+        .ti-cursor{
+            font-family: $font !important;
+            left: -.25ch !important;
+            color: transparent !important;
+            border-left: 1px solid #e5e5e5;
+            top: 5px;
         }
     }
     &_res{
