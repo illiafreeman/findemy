@@ -491,8 +491,10 @@ $('.search-wrap').on('click', function() {
 $('.search-input').on('keyup', function() {
     if((this.value.length) > 4){
         $('.search').addClass('search_res');
+        $('.search-result').addClass('search-result_act');
     }else{
         $('.search').removeClass('search_res');
+        $('.search-result').removeClass('search-result_act');
     }
 });
 $('.search-input').on('blur', function() {
