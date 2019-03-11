@@ -2446,13 +2446,11 @@ body{
             .product__pic{
                 z-index: 10;
                 opacity: 1;
-                &:after{
                     &:hover{
-                        opacity: 1;
+                        opacity: 0.75;
                     }
                     
         
-                }
             }
             .product__like{
                 z-index: 100;

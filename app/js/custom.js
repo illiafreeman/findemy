@@ -454,7 +454,7 @@ $(document).ready(function() {
 
 
 /*search autotype*/
-const instance = new TypeIt('.search_autotype', {
+var instance = new TypeIt('.search_autotype', {
     strings: ["вечернее платье", "туфли", "женские сумки", "пуловер мужской"],
     speed: 150,
     deleteSpeed: 50,
@@ -470,13 +470,12 @@ $('.header-nav__item_button-search').click(function (e) {
     instance.go();
 });
 $('.search-input').val('');
-$('.search').on('click', function() {
+$('.search-wrap').on('click', function() {
     //alert('dfg');
-    instance.freeze();
+    //instance.freeze();
     setTimeout(function () {
         $('.search_autotype').addClass('search_autotype-act');
         $('.search-input').focus();
-        console.log('ghj');
     }, 100);
 
 });
@@ -495,8 +494,12 @@ $('.search-input').on('blur', function() {
 $('.search__close').click(function () {
     $('.search-input').val('');
     $('.search').removeClass('search_act');
+
+    $('.search-result').removeClass('search-result_act');
     setTimeout(function () {
         $('body').removeClass('oh');
+        $('.search_autotype').removeClass('search_autotype-act');
+        $('.search').removeClass('search_res');
     }, 500);
 });
 
