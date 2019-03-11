@@ -2350,14 +2350,17 @@ body{
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -100%;
+    right: 0;
     width: 100%;
     background: #fff;
     z-index: 1000;
     transition: $transition05;
     overflow: auto;
+    opacity: 0;
+    visibility: hidden;
     &_act{
-        right: 0;
+        opacity: 1;
+        visibility: visible;
     }
     &__close{
         width: 30px;
@@ -2438,6 +2441,22 @@ body{
             opacity: 1;
             margin-top: 300px;
             transform: translateY(0);
+        }
+        .product__link{
+            .product__pic{
+                z-index: 10;
+                opacity: 1;
+                &:after{
+                    &:hover{
+                        opacity: 1;
+                    }
+                    
+        
+                }
+            }
+            .product__like{
+                z-index: 100;
+            }
         }
     }
 }

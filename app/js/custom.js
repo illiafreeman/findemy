@@ -462,29 +462,21 @@ const instance = new TypeIt('.search_autotype', {
     waitUntilVisible: false,
     loop: true,
     nextStringDelay: [2000, 1000]
-}).go();
+});
 
 $('.header-nav__item_button-search').click(function (e) {
     $('body').addClass('oh');
     $('.search').addClass('search_act');
-    setTimeout(function () {
-        new TypeIt('#search_autotype', {
-            strings: ["вечернее платье", "туфли", "женские сумки", "пуловер мужской"],
-            speed: 150,
-            deleteSpeed: 50,
-            breakLines: false,
-            waitUntilVisible: false,
-            loop: true,
-            nextStringDelay: [2000, 1000]
-        }).go();
-    }, 500);
+    instance.go();
 });
 $('.search-input').val('');
-$('.search-wrap').on('click', function() {
+$('.search').on('click', function() {
+    //alert('dfg');
     instance.freeze();
     setTimeout(function () {
         $('.search_autotype').addClass('search_autotype-act');
         $('.search-input').focus();
+        console.log('ghj');
     }, 100);
 
 });
@@ -498,7 +490,7 @@ $('.search-input').on('keyup', function() {
     }
 });
 $('.search-input').on('blur', function() {
-    $('.search-field').click();
+    //$('.search-field').click();
 });
 $('.search__close').click(function () {
     $('.search-input').val('');
