@@ -2353,7 +2353,7 @@ body{
     right: 0;
     width: 100%;
     background: #fff;
-    z-index: 1000;
+    z-index: 10000;
     transition: $transition05;
     overflow: auto;
     opacity: 0;
@@ -2417,7 +2417,7 @@ body{
             font-family: $font !important;
             left: -.25ch !important;
             color: transparent !important;
-            border-left: 1px solid #e5e5e5;
+            border-left: 1px solid $font-color;
             top: 5px;
         }
     }
@@ -2446,16 +2446,15 @@ body{
             .product__pic{
                 z-index: 10;
                 opacity: 1;
-                    &:hover{
-                        opacity: 0.75;
-                    }
-                    
+                transition: none;
+                &:hover{
+                    opacity: .85;
+                }
         
             }
-            .product__like{
-                z-index: 100;
-            }
+            
         }
+
     }
 }
 
