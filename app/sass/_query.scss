@@ -235,6 +235,7 @@
     body.oh{
         padding-right: 17px;
     }
+    
 }
 
 @media only screen and (max-width: 1170px) {
@@ -423,6 +424,9 @@
     }
     .product_sel{
         width: calc(50% - 30px);
+    }
+    .search-input{
+        width: 100%;
     }
 }
 
