@@ -465,7 +465,7 @@ var instance = new TypeIt('.search_autotype', {
 });
 
 $('.header-nav__item_button-search').click(function (e) {
-    $('body').addClass('oh');
+    $('body').css('padding-right', scrollbar).addClass('oh');
     $('.search').addClass('search_act');
     instance.go();
 });
@@ -497,7 +497,8 @@ $('.search__close').click(function () {
 
     $('.search-result').removeClass('search-result_act');
     setTimeout(function () {
-        $('body').removeClass('oh');
+        $('body').css('padding-right', scrollbar).removeClass('oh');
+
         $('.search_autotype').removeClass('search_autotype-act');
         $('.search').removeClass('search_res');
     }, 500);
@@ -506,7 +507,9 @@ $('.search__close').click(function () {
 /*end search autotype*/
 
 
-
+var scrollbar = function () {
+    return window.innerWidth - document.documentElement.clientWidth;
+};
 
 
 
