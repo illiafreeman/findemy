@@ -438,6 +438,9 @@
         font-size: 24px;
         line-height: 32px;
     }
+    .search .search-result_act{
+        margin-top: 270px;
+    }
     .search_autotype, .search-input{
         font-size: 40px;
     }
@@ -637,9 +640,7 @@
         right: 25px;
         left: 25px;
     }
-    .search .search-result_act{
-        margin-top: 220px;
-    }
+    
     .blog-page .blog .blog__text {
         font-size: 16px;
         line-height: 24px;
@@ -1316,6 +1317,9 @@
     .blog-banner__title {
         margin-left: 0;
         width: 280px;
+    }
+    .search_autotype{
+        line-height: 1;
     }
     .blog-banner {
         height: 280px;

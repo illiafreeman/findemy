@@ -2358,6 +2358,7 @@ body{
     overflow: auto;
     opacity: 0;
     visibility: hidden;
+    overflow-x: hidden;
     &_act{
         opacity: 1;
         visibility: visible;
@@ -2391,6 +2392,7 @@ body{
         position: absolute;
         bottom: 10px;
         background: transparent;
+        padding: 0;
     }
     &-wrap{
         width: 100%;
@@ -2433,12 +2435,21 @@ body{
         opacity: 0;
         transition: $transition05;
         transform: translateY(50%);
+        padding-top: 50px;
+        position: relative;
+        &:before{
+            @extend %after;
+            top: 0;
+            border-top: 1px solid #e5e5e5;
+            width: 10000px;
+            left: -2000px;
+        }
         &_act{
             visibility: visible;
             overflow: visible;
             max-height: none;
             opacity: 1;
-            margin-top: 300px;
+            margin-top: 380px;
             transform: translateY(0);
         }
         .product__link{
@@ -2454,6 +2465,9 @@ body{
             
         }
 
+    }
+    .paginate{
+        margin-bottom: 73px;
     }
 }
 
