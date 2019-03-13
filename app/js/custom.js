@@ -465,6 +465,27 @@ var instance = new TypeIt('.search_autotype', {
 });
 
 $('.header-nav__item_button-search').click(function (e) {
+
+    var qw = scrollbar();
+    var er;
+
+    if ($(window).width() > 1040) {
+        if(qw > 0){
+            er = 74;
+        }else{
+            er = 48;
+        }
+    }else{
+        er = 21;
+    }
+
+
+    $('.search__close').css({
+        'right': er
+    });
+
+
+
     $('body').css('padding-right', scrollbar).addClass('oh');
     $('.search').addClass('search_act');
     instance.go();
@@ -507,7 +528,7 @@ $('.search__close').click(function () {
 /*end search autotype*/
 
 
-var scrollbar = function () {
+function scrollbar () {
     return window.innerWidth - document.documentElement.clientWidth;
 };
 
