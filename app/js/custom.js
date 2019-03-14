@@ -524,16 +524,22 @@ $('.search__close').click(function () {
         $('.search').removeClass('search_res');
     }, 500);
 });
-
-/*end search autotype*/
-
-
 function scrollbar () {
     return window.innerWidth - document.documentElement.clientWidth;
 };
+/*end search autotype*/
 
 
 
+
+/*alphabet*/
+$(document).ready(function() {
+    $("body").scrollspy({target: "#navigation", offset:0});
+    $('.alphabet-link').click(function () {
+        $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:0});
+    });
+});
+/*end alphabet*/
 
 
 

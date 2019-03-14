@@ -9,7 +9,7 @@
 
         <link href="css/main.css" rel="stylesheet" />
     </head>
-    <body class="">
+    <body data-target="#navigation" data-spy="scroll" style="position: relative;">
         <header class="header clearfix">
             <div class="header-group">
                 <a href="#" class="header-logo"></a>
@@ -206,9 +206,10 @@
                                 <span class="breadcrumbs__link">Бренды</span>
                             </li>
                         </ul>
-                        <div class="brand-wrap">
-                            <ul class="alphabet">
-                                <li class="alphabet-item"><a href="#" class="alphabet-link">0-9</a></li>
+                        <div style="display: none;" class="filter-block"></div>
+                        <div id="navigation" class="brand-wrap">
+                            <ul class="alphabet nav navbar-nav">
+                                <li class="alphabet-item"><a id="link_a" href="#scroll_link_a" class="alphabet-link">0-9</a></li>
                                 <li class="alphabet-item"><a href="#" class="alphabet-link">a</a></li>
                                 <li class="alphabet-item"><a href="#" class="alphabet-link">b</a></li>
                                 <li class="alphabet-item"><a href="#" class="alphabet-link">c</a></li>
@@ -238,7 +239,7 @@
                                 <li class="alphabet-item"><a href="#" class="alphabet-link">а-я</a></li>
                             </ul>
                             <div class="letter-wrap">
-                                <div class="letter">
+                                <div id="scroll_link_a" class="letter">
                                     <div class="letter-title">a</div>
                                     <ul class="letter-list">
                                         <li class="letter-item"><a href="" class="letter-link">Awesome Apparel</a></li>

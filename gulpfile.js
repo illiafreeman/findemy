@@ -44,7 +44,9 @@ gulp.task('scripts', function(){
         'plugins/ion.rangeSlider.min.js',
         'plugins/progressbar.js',
         'plugins/slick.min.js',
-        'plugins/typeit.min.js'
+        'plugins/typeit.min.js',
+        'plugins/jquery.scrollTo.min.js',
+        'plugins/scrollspy.js'
 
 
 
