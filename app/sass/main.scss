@@ -2471,11 +2471,56 @@ body{
     }
 }
 
+.brand-wrap{
 
+}
 
+.alphabet{
+    @extend %flex;
+    padding: 42px 0 54px;
+    &:hover{
+        .alphabet-link{
+            color: $color-gray;
+        }
+    }
+    &-item{
+        display: block;
+        &.active{
+            .alphabet-link{
+            
+            }
+        }
+    }
+    &-link{
+        font-size: 24px;
+        text-transform: uppercase;
+        display: block;
+        transition: $transition;
+        &:hover{
+            color: $font-color !important;
+        }
+    }
+}
 
-
-
+.letter{
+    &-wrap{
+    
+    }
+    &-title{
+        font-size: 48px;
+        line-height: 56px;
+        text-transform: uppercase;
+    }
+    &-list{
+        column-count: 3;
+    }
+    &-item{
+    
+    }
+    &-link{
+    
+    }
+}
 
 
 
