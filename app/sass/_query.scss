@@ -251,10 +251,32 @@
         margin-left: calc(40% + 68px);
         width: 370px;
     }
+    .alphabet-link{
+        margin: 10px 15px;
+    }
+    .alphabet{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 42px -15px 54px;
+    }
     
 }
 
 @media only screen and (max-width: 1040px) {
+    .alphabet {
+        margin: 10px -15px 30px;
+    }
+    .letter-wrap{
+        margin-bottom: 50px;
+    }
+    .letter-list {
+        margin-bottom: 30px;
+    }
+    .letter-title {
+        font-size: 32px;
+        line-height: 56px;
+        margin-bottom: 10px;
+    }
     .aside-group{
         display: flex;
         justify-content: space-between;
@@ -1063,6 +1085,42 @@
             display: none;
         }
     }
+    .brand-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .letter-wrap{
+        order: 1;
+        width: calc(100% - 60px);
+    }
+    .alphabet{
+        position: fixed;
+        right: 21px;
+        top: 137px;
+        bottom: 0;
+        width: 30px;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow: auto;
+        align-items: stretch;
+        transition: $transition;
+        &.vis{
+            top: 0;
+        }
+    }
+    .alphabet:hover .alphabet-link {
+        color: $font-color;
+    }
+    .alphabet-link{
+        font-size: 16px;
+        font-family: $font-bold;
+        margin: 5px 0;
+        display: block;
+        text-align: center;
+    }
+
+
 
 }
 
@@ -1140,6 +1198,9 @@
 }
 
 @media only screen and (max-width: 600px){
+    .letter-list {
+        column-count: 2;
+    }
     .home-slider__title {
         width: 300px;
         height: 126px;
@@ -1314,6 +1375,9 @@
 }
 
 @media only screen and (max-width: 480px){
+    .letter-list {
+        column-count: 1;
+    }
     .blog-banner__title {
         margin-left: 0;
         width: 280px;
@@ -1479,6 +1543,8 @@
     .blog__like {
         background-position: left 0;
     }
+
+
 }
 
 

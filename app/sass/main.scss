@@ -2477,7 +2477,7 @@ body{
 
 .alphabet{
     @extend %flex;
-    padding: 42px 0 54px;
+    margin: 42px 0 54px;
     &:hover{
         .alphabet-link{
             color: $color-gray;
@@ -2510,15 +2510,22 @@ body{
         font-size: 48px;
         line-height: 56px;
         text-transform: uppercase;
+        margin-bottom: 20px;
     }
     &-list{
         column-count: 3;
+        margin-bottom: 40px;
     }
     &-item{
     
     }
     &-link{
-    
+        font-size: 16px;
+        line-height: 32px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
     }
 }
 

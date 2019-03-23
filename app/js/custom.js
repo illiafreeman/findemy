@@ -207,14 +207,14 @@ $(window).scroll(function() {
         }
     }
     if ($(window).width() < 700) {
-        if($(window).scrollTop() > filter_sort.top) {
+/*на мобиле пока что убираем фиксирование сортировки        if($(window).scrollTop() > filter_sort.top) {
             $('.filter-sort').addClass('filter-block_fixed');
             var h = $('.filter-sort').outerHeight();
             $('.catalog-container').css('padding-top', h);
         } else{
             $('.filter-sort').removeClass('filter-block_fixed');
             $('.catalog-container').css('padding-top', 0);
-        }
+        }*/
     }
 });
 
@@ -538,6 +538,15 @@ $(document).ready(function() {
     $('.alphabet-link').click(function () {
         $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:0});
     });
+});
+var alphabet = $(".alphabet");
+$(window).scroll(function() {
+    var topPos = $(this).scrollTop();
+    if (topPos > 50) {
+        $(alphabet).addClass('vis');
+    } else {
+        $(alphabet).removeClass('vis');
+    }
 });
 /*end alphabet*/
 
