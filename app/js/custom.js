@@ -536,16 +536,48 @@ function scrollbar () {
 $(document).ready(function() {
     $("body").scrollspy({target: "#navigation", offset:0});
     $('.alphabet-link').click(function () {
-        $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:0});
+        if($(window).width() < 700){
+            $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:0});
+        }else if ($(window).width() < 1170) {
+            $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-175});
+        }else {
+            $.scrollTo($('#scroll_' + $(this).attr('id')), 1000, {axis:'y', offset:-125});
+        }
+
     });
 });
 var alphabet = $(".alphabet");
 $(window).scroll(function() {
     var topPos = $(this).scrollTop();
-    if (topPos > 50) {
+    if (topPos > 130) {
         $(alphabet).addClass('vis');
     } else {
         $(alphabet).removeClass('vis');
+    }
+});
+var footerMenu = $('.footer-menu').offset();
+var windowHeight = $(window).height();
+$(window).scroll(function() {
+    if ($(window).width() < 700) {
+        if($(window).scrollTop() > footerMenu.top - windowHeight) {
+            $(alphabet).addClass('bot');
+        } else{
+            $(alphabet).removeClass('bot');
+        }
+    }
+});
+
+var alphabet_top = $('.alphabet').offset();
+$(window).scroll(function() {
+    if ($(window).width() > 700) {
+        if($(window).scrollTop() > alphabet_top.top - 50) {
+            alphabet.addClass('alphabet_fixed');
+            var h = $('.alphabet_fixed').outerHeight();
+            $('.letter-wrap').css('padding-top', h);
+        } else{
+            alphabet.removeClass('alphabet_fixed');
+            $('.letter-wrap').css('padding-top', 0);
+        }
     }
 });
 /*end alphabet*/

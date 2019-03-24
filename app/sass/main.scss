@@ -2476,11 +2476,16 @@ body{
 }
 
 .alphabet{
-    @extend %flex;
-    margin: 42px 0 54px;
-    &:hover{
-        .alphabet-link{
-            color: $color-gray;
+    .container{
+        @extend %flex;
+        margin: 42px auto 54px;
+        padding: 0;
+        width: 1388px;
+        flex-wrap: wrap;
+        &:hover{
+            .alphabet-link{
+                color: $color-gray;
+            }
         }
     }
     &-item{
@@ -2498,6 +2503,20 @@ body{
         transition: $transition;
         &:hover{
             color: $font-color !important;
+        }
+    }
+    &_fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 1000;
+        box-shadow: 0 1px 0 0 #e5e5e5;
+        .container{
+            padding: 0 15px;
+            width: 1418px;
+            margin: 37px auto;
         }
     }
 }

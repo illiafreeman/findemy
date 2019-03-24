@@ -64,6 +64,12 @@
 }
 
 @media only screen and (max-width: 1500px){
+    .alphabet .container{
+        width: 100%;
+    }
+    .alphabet_fixed{
+        padding: 0 35px;
+    }
     .footer {
         width: 100%;
         padding: 60px 50px 40px;
@@ -254,17 +260,26 @@
     .alphabet-link{
         margin: 10px 15px;
     }
-    .alphabet{
+    .alphabet .container{
         flex-wrap: wrap;
         justify-content: flex-start;
         margin: 42px -15px 54px;
     }
-    
+    .alphabet_fixed .container{
+        margin: 25px -15px;
+    }
+    .alphabet_fixed {
+        padding: 0 25px;
+    }
 }
 
 @media only screen and (max-width: 1040px) {
-    .alphabet {
+    .alphabet .container{
         margin: 10px -15px 30px;
+    }
+    .alphabet_fixed .container{
+        margin: 25px -15px;
+        padding: 0;
     }
     .letter-wrap{
         margin-bottom: 50px;
@@ -1099,18 +1114,23 @@
         top: 137px;
         bottom: 0;
         width: 30px;
-        margin: 0;
-        flex-direction: column;
-        flex-wrap: nowrap;
         overflow: auto;
-        align-items: stretch;
         transition: $transition;
+        .container{
+            margin: 0;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: stretch;
+        }
         &.vis{
             top: 0;
         }
+        &.bot{
+            opacity: 0;
+        }
     }
     .alphabet:hover .alphabet-link {
-        color: $font-color;
+        color: $font-color !important;
     }
     .alphabet-link{
         font-size: 16px;
