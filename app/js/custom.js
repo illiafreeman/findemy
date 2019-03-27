@@ -584,7 +584,18 @@ $(window).scroll(function() {
 
 
 
-
+/*info slider*/
+$('.info-slider').slick({
+    autoplay: false,
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    mobileFirst: true,
+    responsive: true,
+    prevArrow: '<div class="slick-prev slick-arrow"></div>',
+    nextArrow: '<div class="slick-next slick-arrow"></div>'
+});
+/*end info slider*/
 
 
 
