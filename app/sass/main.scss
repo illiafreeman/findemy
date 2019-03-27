@@ -2594,10 +2594,68 @@ body{
     }
 }
 
+.info{
+    &-page{
+        &__text{
+            p{
+            
+            }
+            h2{
+            
+            }
+        }
+    }
+    &-container{
+    
+    }
+    &-title{
+    
+    }
+    &-cat{
+    
+    }
+    &-container{
+    
+    }
+    &-container{
+    
+    }
+    &-container{
+    
+    }
+    &-container{
+    
+    }
+    &-slider{
+        &__item{
+            img{
+            
+            }
+        }
+        .slick-arrow{
+            &.slick-prev{
+            
+            }
+            &.slick-next{
+            
+            }
+        }
+    }
+    &-footer{
+        &__back{
+        
+        }
+        &__like{
+        
+        }
+    }
+}
 
-
-
-
+.blog-category{
+    &__item{
+    
+    }
+}
 
 
 
