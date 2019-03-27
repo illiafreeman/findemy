@@ -2548,7 +2548,51 @@ body{
     }
 }
 
-
+.error{
+    height: 700px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../img/404.jpg);
+    position: relative;
+    &-title{
+        max-width: 580px;
+        font-size: 48px;
+        font-family: $font;
+        line-height: 56px;
+        margin-bottom: 40px;
+    }
+    &-subtitle{
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+    }
+    &-menu{
+        &__item{
+            margin-bottom: 10px;
+        }
+        &__link{
+        
+        }
+    }
+    &-404{
+        font-size: 24px;
+        font-family: $font-bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        bottom: 70px;
+        position: absolute;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 130px;
+    }
+}
 
 
 
