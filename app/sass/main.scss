@@ -2574,9 +2574,18 @@ body{
         &__item{
             margin-bottom: 10px;
         }
-        &__link{
-        
+        &:hover{
+            .error-menu__link{
+                color: $color-gray;
+                &:hover{
+                    color: $font-color;
+                }
+            }
         }
+        &:hover{
+            color: $font-color;
+        }
+        
     }
     &-404{
         font-size: 24px;
@@ -2591,6 +2600,7 @@ body{
         flex-direction: column;
         height: 100%;
         padding-top: 130px;
+        align-items: flex-start;
     }
 }
 

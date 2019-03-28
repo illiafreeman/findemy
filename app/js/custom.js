@@ -559,7 +559,7 @@ var footerMenu = $('.footer-menu').offset();
 var windowHeight = $(window).height();
 $(window).scroll(function() {
     if ($(window).width() < 700) {
-        if($(window).scrollTop() > footerMenu.top - windowHeight) {
+        if($(window).scrollTop() > footerMenu.top - (windowHeight + 50)) {
             $(alphabet).addClass('bot');
         } else{
             $(alphabet).removeClass('bot');
@@ -570,7 +570,7 @@ $(window).scroll(function() {
 var alphabet_top = $('.alphabet').offset();
 $(window).scroll(function() {
     if ($(window).width() > 700) {
-        if($(window).scrollTop() > alphabet_top.top - 50) {
+        if($(window).scrollTop() > alphabet_top.top - 80) {
             alphabet.addClass('alphabet_fixed');
             var h = $('.alphabet_fixed').outerHeight();
             $('.letter-wrap').css('padding-top', h);

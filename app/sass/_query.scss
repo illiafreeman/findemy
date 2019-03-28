@@ -1151,7 +1151,9 @@
             top: 0;
         }
         &.bot{
-            opacity: 0;
+            //opacity: 0;
+            transition: $transition;
+            right: -100px;
         }
     }
     .alphabet:hover .alphabet-link {
