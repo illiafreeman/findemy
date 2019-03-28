@@ -1592,13 +1592,16 @@
     .root-category__name_left:after{
         bottom: -1px;
     }
-    .root-category__name_right:after{
-        top: -3px;
+    .root-category__name_right, .info-footer__back{
+        &:after{
+            top: -3px;
+        }
+        
     }
     .catalog-banner__back:after{
         top: -3px;
     }
-    .blog__like {
+    .blog__like, .info-footer__like {
         background-position: left 0;
     }
 
