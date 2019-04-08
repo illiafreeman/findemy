@@ -2883,19 +2883,27 @@ body{
     
     }
     &-container{
-    
+        width: 920px;
+        margin: 0 auto;
     }
     &-title{
-    
+        font-size: 48px;
+        line-height: 56px;
+        font-family: $font;
+        text-align: center;
+        margin: 25px 0 45px;
     }
     &-item{
-    
+        margin-bottom: 45px;
     }
     &-que{
-    
+        font-size: 24px;
+        line-height: 32px;
+        font-family: $font;
     }
     &-ans{
-    
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 

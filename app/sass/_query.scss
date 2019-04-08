@@ -277,6 +277,9 @@
 }
 
 @media only screen and (max-width: 1040px) {
+    .faq-container{
+        width: 100%;
+    }
     .about-video{
         .container{
             padding: 0;
@@ -995,6 +998,19 @@
 }
 
 @media only screen and (max-width: 700px){
+    .faq-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 5px 0 25px;
+    }
+    .faq-que {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 16px;
+    }
+    .faq-item {
+        margin-bottom: 40px;
+    }
     .logo-white{
         width: 40vw;
     }
