@@ -276,7 +276,7 @@ $(".js-range-slider").ionRangeSlider({
     min: 0,
     max: 10000,
     from: 0,
-    to: 10000,
+    to: 5000,
     grid: false,
     force_edges: true,
     postfix: ' p.',
