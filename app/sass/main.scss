@@ -2198,7 +2198,8 @@ body{
 
 .col-center {
     flex: 0 0 calc(100% - 360px);
-    overflow: hidden;
+    max-width: calc(100% - 360px);
+    //overflow: hidden;
 }
 
 .col-aside{
