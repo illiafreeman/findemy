@@ -818,7 +818,7 @@ body{
     }
     &__desc{
         font-size: 16px;
-        height: 45px;
+        max-height: 45px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -1176,7 +1176,7 @@ body{
 }
 
 .range{
-    padding: 15px 32px 0;
+    padding: 15px 18px 0;
     background: #fff;
     .irs-from, .irs-to, .irs-single{
         font-family: $font;

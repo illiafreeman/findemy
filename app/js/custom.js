@@ -278,6 +278,7 @@ $(".js-range-slider").ionRangeSlider({
     from: 0,
     to: 10000,
     grid: false,
+    force_edges: true,
     postfix: ' p.',
     onFinish: function(data){
         if((data.from) > (data.min) || (data.to) < (data.max)){

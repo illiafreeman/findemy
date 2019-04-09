@@ -1247,14 +1247,17 @@
     }
     .product {
         width: calc(50% - 16px);
-        margin: 8px;
+        margin: 16px 8px;
     }
     .filter-btn, .sort{
         width: calc(50% - 16px);
         margin: 0 8px;
     }
-    .catalog-container, .filter-sort{
+    .filter-sort{
         margin: 0 -8px;
+    }
+    .catalog-container{
+        margin: -16px -8px;
     }
     .sort__total{
         margin: 15px 0 7px;
