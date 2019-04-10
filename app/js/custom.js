@@ -151,22 +151,15 @@ $(document).ready(function() {
         console.log(arr);
         compare();
     });
-    $('.filter').find('.filter__action-button_ok').click(function(){
+    $('.filter').find('.filter__action-button_ok').click(function(e){
         sessionStorage.clear();
         sessionStorage.setItem("selected", JSON.stringify(arr));
     });
-    $('.filter').find('.filter__action-button_cancel').click(function(){
-        arr = (JSON.parse(sessionStorage.getItem("selected")));
-        console.log(arr);
-        $('.filter__cat input[type="checkbox"]').each(function(){
-            var check_id = $(this).attr('id');
-            console.log(check_id);
-            if((arr.indexOf(check_id)) < 0){
-                $(this).parent('label').removeClass('filter__cat_act');
-                $(this).attr('checked',false);
-            }else{
-                $(this).attr('checked',false);
-            }
+    $('.filter').find('.filter__action-button_cancel').click(function(e){
+        e.stopPropagation();
+        $(this).parents('.filter').find('.filter__cat input[type="checkbox"]').each(function(){
+            $(this).parent('label').removeClass('filter__cat_act');
+            $(this).attr('checked',false);
         });
     });
 
@@ -188,9 +181,18 @@ $(document).ready(function() {
 
 
     $('body').click(function () {
-        //$('.filter').removeClass('filter_act');
-        //$('.filter').find('input').prop('checked', false).change();
-        //re();
+        $('.filter').removeClass('filter_act');
+        arr = (JSON.parse(sessionStorage.getItem("selected")));
+        $('.filter__cat input[type="checkbox"]').each(function(){
+            var check_id = $(this).attr('id');
+            console.log(check_id);
+            if((arr.indexOf(check_id)) < 0){
+                $(this).parent('label').removeClass('filter__cat_act');
+                $(this).attr('checked',false);
+            }else{
+                $(this).attr('checked',false);
+            }
+        });
     });
 
     $('.filter').click(function (e) {
@@ -211,7 +213,7 @@ $(document).ready(function() {
     $('.filter__action-button_ok').click(function (e) {
         e.preventDefault();
         e.stopPropagation();
-        //$(this).parents('.filter').removeClass('filter_act');
+        $(this).parents('.filter').removeClass('filter_act');
     });
 
     $(document).on('click','.filter__action-button_ok',function(){
